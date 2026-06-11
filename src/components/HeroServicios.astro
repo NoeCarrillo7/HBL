@@ -1,0 +1,28 @@
+---
+//Este archivo es el hero de la pagina de servicios y para no tener que pegar el mismo codigo en cada servicio
+//lo hacemos como un componente compartido como un navbar o un footer que despues vamos a inyectar en los otros archivos.
+//Ademas ya tiene el submenu para navegar los servicios
+
+
+interface Props {
+  servicioActivo: string;
+}
+const { servicioActivo } = Astro.props;
+---
+
+
+
+
+
+<section style="text-align: center; padding: 3rem 1rem; background: #111;">
+  <h2>SOLUCIONES DISEÑADAS A TU MEDIDA</h2>
+  
+  <div class="submenu" style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem;">
+    <a href="/servicios/branding" class={servicioActivo === 'branding' ? 'active' : ''}>BRANDING</a>
+    <a href="/servicios/social-media" class={servicioActivo === 'social-media' ? 'active' : ''}>SOCIAL MEDIA</a>
+    <a href="/servicios/audiovisual" class={servicioActivo === 'audiovisual' ? 'active' : ''}>AUDIOVISUAL</a>
+    <a href="/servicios/marketing" class={servicioActivo === 'marketing' ? 'active' : ''}>MARKETING</a>
+    <a href="/servicios/web" class={servicioActivo === 'web' ? 'active' : ''}>WEB</a>
+    <a href="/servicios/consultoria" class={servicioActivo === 'consultoria' ? 'active' : ''}>CONSULTORÍA</a>
+  </div>
+</section>

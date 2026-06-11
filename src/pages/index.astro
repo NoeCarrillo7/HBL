@@ -1,0 +1,28 @@
+---
+//Como la pagina de inicio se escribe sobre el MainLayout ya no es necesario importar los componentes por que esos 
+//ya estan importados alla
+import MainLayout from '../layouts/MainLayout.astro';
+import Contacto from '../components/Contacto.astro';
+---
+
+
+
+<MainLayout title="HBL - Inicio">
+  <main style="text-align: center; padding: 5rem 1rem;">
+    <h1>Transforma la historia de tu marca</h1>
+    <p>Servicios personalizados y estratégicos.</p>
+    <div style="margin-top: 2rem;">
+      <a href="/servicios/branding">VER SERVICIOS</a>
+    </div>
+  </main>
+
+  <Contacto />
+</MainLayout>
+
+<style>
+  a{
+    background: #7c3aed;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+  }
+</style>
