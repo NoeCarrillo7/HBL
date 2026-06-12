@@ -1,28 +1,31 @@
 ---
-//Este archivo es el hero de la pagina de servicios y para no tener que pegar el mismo codigo en cada servicio
-//lo hacemos como un componente compartido como un navbar o un footer que despues vamos a inyectar en los otros archivos.
-//Ademas ya tiene el submenu para navegar los servicios
-
-
 interface Props {
   servicioActivo: string;
 }
 const { servicioActivo } = Astro.props;
 ---
 
-
-
-
-
-<section style="text-align: center; padding: 3rem 1rem; background: #111;">
-  <h2>SOLUCIONES DISEÑADAS A TU MEDIDA</h2>
+<section class="flex flex-col items-center mt-15 px-4">
+  <p class="text-titulos font-extralight tracking-wide text-xl mb-2.5">NUESTROS SERVICIOS</p>
   
-  <div class="submenu" style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem;">
-    <a href="/servicios/branding" class={servicioActivo === 'branding' ? 'active' : ''}>BRANDING</a>
-    <a href="/servicios/social-media" class={servicioActivo === 'social-media' ? 'active' : ''}>SOCIAL MEDIA</a>
-    <a href="/servicios/audiovisual" class={servicioActivo === 'audiovisual' ? 'active' : ''}>AUDIOVISUAL</a>
-    <a href="/servicios/marketing" class={servicioActivo === 'marketing' ? 'active' : ''}>MARKETING</a>
-    <a href="/servicios/web" class={servicioActivo === 'web' ? 'active' : ''}>WEB</a>
-    <a href="/servicios/consultoria" class={servicioActivo === 'consultoria' ? 'active' : ''}>CONSULTORÍA</a>
+  <h2 class="text-center text-5xl md:text-5xl font-bold mb-5 leading-none tracking-wide">
+    SOLUCIONES DISEÑADAS<br> A TU <span class="text-titulos">MEDIDA</span>
+  </h2>
+  
+  <span class="text-textos font-normal text-lg text-center tracking-wide max-w-2xl">
+    Ofrecemos una gama de servicios para satisfacer las necesidades de <br class="hidden md:inline"> tu marca y hacerla destacar.
+  </span>
+
+  <a class="px-5 py-2.5 bg-[#4F119F] hover:bg-[#5f18bd] text-white rounded-full my-10 font-medium tracking-wide transition-colors" href="#">
+    DESCARGAR CATÁLOGO
+  </a>
+  
+  <div class="w-full max-w-6xl grid grid-cols-2 sm:grid-cols-3 md:flex md:justify-between gap-3 md:gap-2">
+    <a href="/servicios/branding" class={`text-center text-xs font-extralight border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'branding' ? 'active' : ''}`}>BRANDING</a>
+    <a href="/servicios/social-media" class={`text-center text-xs font-extralight border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'social-media' ? 'active' : ''}`}>SOCIAL MEDIA</a>
+    <a href="/servicios/audiovisual" class={`text-center text-xs font-extralight border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'audiovisual' ? 'active' : ''}`}>AUDIOVISUAL</a>
+    <a href="/servicios/marketing" class={`text-center text-xs font-extralight border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'marketing' ? 'active' : ''}`}>MARKETING</a>
+    <a href="/servicios/web" class={`text-center text-xs font-extralight border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'web' ? 'active' : ''}`}>WEB</a>
+    <a href="/servicios/consultoria" class={`text-center text-xs font-extralight border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'consultoria' ? 'active' : ''}`}>CONSULTORÍA</a>
   </div>
 </section>

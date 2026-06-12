@@ -1,11 +1,130 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
-import HeroServicios from '../../components/HeroServicios.astro';
+import MainLayout from "../../layouts/MainLayout.astro";
+import HeroServicios from "../../components/HeroServicios.astro";
 ---
+
 <MainLayout title="HBL - Branding">
   <HeroServicios servicioActivo="branding" />
-  <main style="padding: 3rem; text-align: center;">
-    <h1>BRANDING - IDENTIDAD DE MARCA</h1>
-    <p>Contenido y paquetes específicos de Branding...</p>
+  <main class="container-branding">
+    <div>
+      <h1>BRANDING - <span>IDENTIDAD DE MARCA</span></h1>
+      <p>
+        No todos los negocios necesitan lo mismo, por eso nuestros paquetes
+        incluyen una cantidad determinada de piezas de diseño que puedes
+        utilizar en los materiales que más necesites.
+      </p>
+    </div>
+
+    <div class="content-paquetes">
+      <h2 class="section-title">
+        PAQUETES DE <span>CONTENIDO</span>
+      </h2>
+
+      <div class="packages-grid">
+        <div class="package-card">
+          <div class="card-header">
+            <span class="brand-tag">BRAND</span>
+            <h3 class="card-title">ESSENTIALS</h3>
+            <p class="card-subtitle">Para negocios que están comenzando</p>
+          </div>
+
+          <ul class="card-features">
+            <li>Logotipo + Brandboard</li>
+            <li>Guía básica de marca</li>
+            <li>3 créditos de diseño</li>
+          </ul>
+
+          <div class="card-footer">
+            <div class="card-price">$000.00<span>MXN</span></div>
+            <p class="card-delivery">Lapso de 3 a 4 semanas</p>
+            <button class="card-btn">ADQUIRIR</button>
+          </div>
+        </div>
+
+        <div class="package-card featured">
+          <div class="card-header">
+            <span class="brand-tag">BRAND</span>
+            <h3 class="card-title">360</h3>
+            <p class="card-subtitle">Para marcas que buscan crecer</p>
+          </div>
+
+          <ul class="card-features">
+            <li>Estrategia de branding</li>
+            <li>Brandbook completo</li>
+            <li>12 créditos de diseño</li>
+            <li>Asesoría de implementación</li>
+          </ul>
+
+          <div class="card-footer">
+            <div class="card-price">$000.00<span>MXN</span></div>
+            <p class="card-delivery">Lapso de 3 a 4 semanas</p>
+            <button class="card-btn">ADQUIRIR</button>
+          </div>
+        </div>
+
+        <div class="package-card">
+          <div class="card-header">
+            <span class="brand-tag">BRAND</span>
+            <h3 class="card-title">GROWTH</h3>
+            <p class="card-subtitle">
+              Para una implementación completa de marca
+            </p>
+          </div>
+
+          <ul class="card-features">
+            <li>Identidad visual completa</li>
+            <li>Brandbook básico</li>
+            <li>6 créditos de diseño</li>
+          </ul>
+
+          <div class="card-footer">
+            <div class="card-price">$000.00<span>MXN</span></div>
+            <p class="card-delivery">Lapso de 3 a 4 semanas</p>
+            <button class="card-btn">ADQUIRIR</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 </MainLayout>
+
+<style>
+  .container-branding {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-branding div {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h1 span {
+    color: #8b5cf6;
+  }
+
+  .content-paquetes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid turquoise;
+  }
+
+  .section-title span{
+    color: #8b5cf6;
+  }
+
+  .packages-grid{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    border: 1px solid white;
+  }
+  .package-card{
+    border: 1px solid #8b5cf6;
+  }
+</style>
