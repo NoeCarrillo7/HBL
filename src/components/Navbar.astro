@@ -1,17 +1,76 @@
 ---
 //Este archivo se importa en el MainLayout, checa que las rutas son por medio de etiquetas a entonces
 //es mucho mas facil hacer navegacion 
+
+import logo from '../assets/nav/logomorado.png';
 ---
 
+<nav class="flex items-center justify-between px-20 py-6 bg-[#050505] relative">
 
-
-
-
-<nav style="display: flex; justify-content: space-between; padding: 2rem; background: #050505;">
-  <div class="logo"><a href="/"><strong>HBL</strong></a></div>
-  <div class="links" style="display: flex; gap: 2rem;">
-    <a href="/">INICIO</a>
-    <a href="/servicios/branding">SERVICIOS</a>
-    <a href="/#contacto">CONTACTO</a>
+  <div>
+    <a href="/">
+      <img
+        src={logo.src}
+        alt="HBL"
+        class="h-[70px] w-auto block"
+      />
+    </a>
   </div>
+
+  <div
+    class="absolute left-1/2 -translate-x-1/2 flex gap-12"
+  >
+    <a href="/" class="nav-link">
+      INICIO
+    </a>
+
+    <a href="/servicios/branding" class="nav-link">
+      SERVICIOS
+    </a>
+
+    <a href="/#acercade" class="nav-link">
+      ACERCA DE
+    </a>
+  </div>
+
+  <div>
+    <a
+      href="/#contacto"
+      class="bg-violet-700 hover:bg-violet-600 text-white no-underline px-7 py-3 font-semibold transition-all duration-300 rounded-tl-[15px] rounded-br-[15px]"
+    >
+      CONTACTO
+    </a>
+  </div>
+
 </nav>
+
+<style>
+  .nav-link{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+  }
+
+  .nav-link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 1px;
+
+    background: #8b5cf6;
+    transition: width .3s ease;
+  }
+
+  .nav-link:hover{
+    color: #8b5cf6;
+  }
+
+  .nav-link:hover::after{
+    width: 100%;
+  }
+</style>

@@ -1,19 +1,96 @@
 ---
-// src/components/Footer.astro
+import logo from '../assets/footer/logoblanco.png';
+import fond from '../assets/footer/fondo.png';
 ---
-<footer style="background: #050505; padding: 3rem; margin-top: 5rem; border-top: 1px solid #222;">
-  <div style="display: flex; justify-content: space-between; max-width: 1000px; margin: 0 auto;">
-    <div><strong>HBL</strong></div>
-    <div style="display: flex; gap: 3rem;">
-      <div>
-        <h4>LINKS</h4>
-        <p><a href="/">Inicio</a></p>
-        <p><a href="/servicios/branding">Servicios</a></p>
-      </div>
-      <div>
-        <h4>CONTACTO</h4>
-        <p>agencia@hbl.com</p>
+
+<footer
+  class="relative overflow-hidden px-8 py-8 bg-cover bg-center bg-no-repeat"
+  style={`background-image: url(${fond.src});`}
+>
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <div>
+      <img
+        src={logo.src}
+        alt="HBL"
+        class="w-24 pt-16"
+      />
+    </div>
+
+    <div>
+      <h4 class="text-white text-xl font-medium mb-4">
+        LINKS
+      </h4>
+
+      <div class="flex flex-col gap-3">
+        <a href="/" class="text-zinc-300 hover:text-white transition">
+          Inicio
+        </a>
+
+        <a href="/servicios" class="text-zinc-300 hover:text-white transition">
+          Servicios
+        </a>
+
+        <a href="/contacto" class="text-zinc-300 hover:text-white transition">
+          Contáctanos
+        </a>
       </div>
     </div>
+
+    <div>
+      <h4 class="text-white text-xl font-medium mb-4">
+        SOCIAL
+      </h4>
+
+      <div class="flex gap-8 text-xl">
+        <a
+          href="https://instagram.com/tucuenta"
+          class="text-zinc-300 hover:text-white transition"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://facebook.com/tupagina"
+          class="text-zinc-300 hover:text-white transition"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h4 class="text-white text-xl font-medium mb-4">
+        CONTACTO
+      </h4>
+
+      <a
+        href="mailto:horecabrandinglab@gmail.com"
+        class="text-zinc-300 hover:text-white transition"
+      >
+        horecabrandinglab@gmail.com
+      </a>
+    </div>
+
+  </div>
+
+  <div class="mt-16 text-center text-zinc-400 text-xs">
+
+    <p>
+      2026 Horeca Branding Lab. Todos los derechos reservados.
+    </p>
+
+    <div class="mt-2">
+      <a href="#" class="text-white hover:text-purple-400">
+        Términos y Condiciones
+      </a>
+
+      <span class="mx-2">|</span>
+
+      <a href="#" class="text-white hover:text-purple-400">
+        Política de Privacidad
+      </a>
+    </div>
+
   </div>
 </footer>
