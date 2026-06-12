@@ -3,26 +3,50 @@
 //ya estan importados alla
 import MainLayout from '../layouts/MainLayout.astro';
 import Contacto from '../components/Contacto.astro';
+import Acercade from '../components/inicio/Acercade.astro';
+import fondo from '../assets/hero/s1-elemento1.jpg';
 ---
 
 
 
 <MainLayout title="HBL - Inicio">
-  <main style="text-align: center; padding: 5rem 1rem;">
-    <h1>Transforma la historia de tu marca</h1>
-    <p>Servicios personalizados y estratégicos.</p>
-    <div style="margin-top: 2rem;">
-      <a href="/servicios/branding">VER SERVICIOS</a>
+
+  <main
+    class="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-4 bg-cover bg-center bg-no-repeat"
+    style={`background-image: url(${fondo.src});`}
+  >
+
+    <div class="absolute inset-0 bg-black/55"></div>
+
+    <div class="relative z-10">
+
+      <h1 class="font-extrabold leading-none">
+        <span class="block text-white text-7xl">
+          Transforma la
+        </span>
+
+        <span class="block text-[#8B5CF6] text-7xl">
+          historia de tu marca
+        </span>
+      </h1>
+
+      <p class="mt-4 text-zinc-300 text-xl">
+        Servicios personalizados y estratégicos.
+      </p>
+
+      <div class="mt-8">
+        <a
+          href="/servicios/branding"
+          class="inline-block bg-violet-700 hover:bg-violet-600 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1"
+        >
+          VER SERVICIOS
+        </a>
+      </div>
+
     </div>
   </main>
 
+  <Acercade />
   <Contacto />
-</MainLayout>
 
-<style>
-  a{
-    background: #7c3aed;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-  }
-</style>
+</MainLayout>
