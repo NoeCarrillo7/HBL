@@ -3,42 +3,35 @@
 //ya estan importados alla
 import MainLayout from '../layouts/MainLayout.astro';
 import Contacto from '../components/Contacto.astro';
-import Acercade from '../components/inicio/Acercade.astro';
+import Acercade from '../pages/inicio/Acercade.astro';
 import fondo from '../assets/hero/s1-elemento1.jpg';
 ---
-
-
 
 <MainLayout title="HBL - Inicio">
 
   <main
-    class="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-4 bg-cover bg-center bg-no-repeat"
-    style={`background-image: url(${fondo.src});`}
-  >
+  class="relative min-h-[45vh] md:min-h-[90vh] flex flex-col justify-start md:justify-center items-center text-center px-4 bg-cover bg-center bg-no-repeat"
 
-    <div class="absolute inset-0 bg-black/55"></div>
+>
+<img
+    src={fondo.src}
+    alt="Fondo hero"
+    class="absolute inset-0 w-full h-full object-cover object-top md:object-center"
+  />
 
-    <div class="relative z-10">
 
-      <h1 class="font-extrabold leading-none">
-        <span class="block text-white text-7xl">
-          Transforma la
-        </span>
+   <div class="relative z-10 pt-24 md:pt-0">
 
-        <span class="block text-[#8B5CF6] text-7xl">
-          historia de tu marca
-        </span>
-      </h1>
+      <h2 class="text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-5 leading-none tracking-wide">
+        TRANSFORMAMOS LA <br> HISTORIA DE <span class="text-titulos">TU MARCA </span>
+      </h2>
 
-      <p class="mt-4 text-zinc-300 text-xl">
-        Servicios personalizados y estratégicos.
+      <p class="text-textos text-base sm:text-lg max-w-xl mx-auto">
+        Servicios personalizados y estrategicos.
       </p>
 
       <div class="mt-8">
-        <a
-          href="/servicios/branding"
-          class="inline-block bg-violet-700 hover:bg-violet-600 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1"
-        >
+        <a class="px-6 py-3 bg-[#4F119F] hover:bg-[#5f18bd] text-white rounded-full my-10 font-medium tracking-wide transition-colors" href="/servicios/branding">
           VER SERVICIOS
         </a>
       </div>

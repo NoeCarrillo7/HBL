@@ -3,40 +3,55 @@
 //es mucho mas facil hacer navegacion 
 
 import logo from '../assets/nav/logomorado.png';
+const currentPath = Astro.url.pathname;
 ---
 
-<nav class="flex items-center justify-between px-20 py-6 bg-[#050505] relative">
+<nav class="sticky top-0 z-50 flex items-center justify-center md:justify-between px-4 md:px-8 lg:px-20 py-6 bg-[#050505] border-b border-white/10">
 
-  <div>
-    <a href="/">
-      <img
-        src={logo.src}
-        alt="HBL"
-        class="h-[70px] w-auto block"
-      />
-    </a>
-  </div>
-
-  <div
-    class="absolute left-1/2 -translate-x-1/2 flex gap-12"
+  <div class="flex-1 flex justify-center md:justify-start">
+  <button
+    id="menu-btn"
+    class="md:hidden"
   >
-    <a href="/" class="nav-link">
-      INICIO
-    </a>
+    <img
+      src={logo.src}
+      alt="HBL"
+      class="h-[60px] w-auto"
+    />
+  </button>
 
-    <a href="/servicios/branding" class="nav-link">
-      SERVICIOS
-    </a>
+  <a href="/" class="hidden md:block">
+    <img
+      src={logo.src}
+      alt="HBL"
+      class="h-[70px] w-auto"
+    />
+  </a>
+</div>
 
-    <a href="/#acercade" class="nav-link">
-      ACERCA DE
-    </a>
+  <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-12">
+
+  <a href="/" 
+    class={`nav-link tracking-wide ${currentPath === '/' ? 'font-medium text-white' : 'font-light text-white/60'}`}>
+    INICIO
+  </a>
+  <a href="/servicios/branding"
+    class={`nav-link tracking-wide ${
+    currentPath.startsWith('/servicios') ? 'font-medium text-white' : 'font-light text-white/60'}`}>
+    SERVICIOS
+  </a>
+
+  <a href="/#acercade"
+    class={`nav-link tracking-wide ${
+    currentPath === '/#acercade' ? 'font-medium text-white' : 'font-light text-white/60'}`}>
+    ACERCA DE
+  </a>
   </div>
 
-  <div>
+  <div class="hidden md:block">
     <a
       href="/#contacto"
-      class="bg-violet-700 hover:bg-violet-600 text-white no-underline px-7 py-3 font-semibold transition-all duration-300 rounded-tl-[15px] rounded-br-[15px]"
+      class="bg-violet-700 hover:bg-violet-600 text-white no-underline px-7 py-3 font-light transition-all duration-300 rounded-tl-[15px] rounded-br-[15px]"
     >
       CONTACTO
     </a>
@@ -44,12 +59,74 @@ import logo from '../assets/nav/logomorado.png';
 
 </nav>
 
+<!-- MENU MOVIL-->
+
+<div
+  id="mobile-menu"
+  class="fixed inset-0 z-[999] bg-[#050505] hidden md:hidden"
+>
+  <button
+    id="close-menu"
+    class="absolute top-8 right-8 text-white text-3xl"
+  >
+    ✕
+  </button>
+
+  <div class="h-full flex flex-col justify-center items-center gap-10">
+
+    <a
+      href="/"
+      class="text-white text-3xl font-light tracking-widest"
+    >
+      INICIO
+    </a>
+
+    <a
+      href="/servicios/branding"
+      class="text-white text-3xl font-light tracking-widest"
+    >
+      SERVICIOS
+    </a>
+
+    <a
+      href="/#acercade"
+      class="text-white text-3xl font-light tracking-widest"
+    >
+      ACERCA DE
+    </a>
+
+    <a
+      href="/#contacto"
+      class="text-titulos text-3xl font-medium tracking-widest"
+    >
+      CONTACTO
+    </a>
+
+  </div>
+</div>
+
+<!-- FUNCIONALIDADES DEL MENU MOVIL-->
+<script>
+  const menu = document.getElementById("mobile-menu");
+  const openBtn = document.getElementById("menu-btn");
+  const closeBtn = document.getElementById("close-menu");
+
+  openBtn?.addEventListener("click", () => {
+    menu?.classList.remove("hidden");
+  });
+
+  closeBtn?.addEventListener("click", () => {
+    menu?.classList.add("hidden");
+  });
+</script>
+
+<!-- ANIMACIONES DEL NAV -->
+
 <style>
   .nav-link{
     position: relative;
     color: white;
     text-decoration: none;
-    font-weight: 600;
     transition: .3s;
   }
 
