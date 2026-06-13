@@ -1,11 +1,169 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import Contacto from '../../components/Contacto.astro';
+
 import HeroServicios from '../../components/HeroServicios.astro';
+import icon_benficios1 from '../../assets/servicios/icon-beneficios1.png'
+import icon_benficios2 from '../../assets/servicios/icon-beneficios2.png'
+import icon_benficios3 from '../../assets/servicios/icon-beneficios3.png'
+import icon_benficios4 from '../../assets/servicios/icon-beneficios4.png'
+import icon_benficios5 from '../../assets/servicios/icon-beneficios5.png'
+import beneficios from '../../assets/servicios/beneficios.png'
+
 ---
 <MainLayout title="HBL - Social Media">
   <HeroServicios servicioActivo="social-media" />
-  <main style="padding: 3rem; text-align: center;">
-    <h1>SOCIAL MEDIA - CREACIÓN DE CONTENIDO</h1>
-    <p>Contenido y paquetes específicos de Redes Sociales...</p>
+  <main class="flex flex-col items-center">
+    <div class="w-4/5 mt-30">
+
+      <div>
+        <h1 class="text-3xl font-bold mb-5 tracking-wide" >SOCIAL MEDIA - CREACIÓN DE CONTENIDO + GESTIÓN ESTRATÉGICA</h1>
+        <p class="text-textos font-normal text-base md:text-lg tracking-wide leading-relaxe">Transformamos tus redes sociales en una herramienta de crecimiento para tu negocio. 
+          Desarrollamos estrategias, contenido visual y planes de publicación que aumentan la 
+          visibilidad de tu marca, fortalecen la relación con tus clientes y generan oportunidades reales de venta.
+        </p>
+      </div>
+      
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-15 gap-10">
+        <div class="flex flex-col gap-7">
+          <h1 class="text-2xl font-normal  tracking-wide">Beneficios:</h1>
+          <div class="flex gap-5 ml-10">
+            <img src={icon_benficios1.src} alt="" class="w-5 h-5 shrink-0 object-contain">
+            <p class="text-textos font-normal text-base tracking-wider">Estrategia de contenido alineada con tus objetivos.</p>
+          </div>
+          <div class="flex gap-5 ml-10">
+            <img src={icon_benficios2.src} alt="" class="w-5 h-5 shrink-0 object-contain">
+            <p class="text-textos font-normal text-base tracking-wider">Creación de contenido atractivo y relevante.</p>
+          </div>
+          <div class="flex gap-5 ml-10">
+            <img src={icon_benficios3.src} alt="" class="w-5 h-5 shrink-0 object-contain">
+            <p class="text-textos font-normal text-base tracking-wider">Planificación mensual para mantener consistencia.</p>
+          </div>
+          <div class="flex gap-5 ml-10">
+            <img src={icon_benficios4.src} alt="" class="w-5 h-5 shrink-0 object-contain">
+            <p class="text-textos font-normal text-base tracking-wider">Gestión activa de tu comunidad digital.</p>
+          </div>
+          <div class="flex gap-5 ml-10">
+            <img src={icon_benficios5.src} alt="" class="w-5 h-5 shrink-0 object-contain">
+            <p class="text-textos font-normal text-base tracking-wider">Planes flexibles adaptados a las necesidades de tu negocio.</p>
+          </div>
+        </div>
+        <div>
+          <img src={beneficios.src} alt="beneficios" class="rounded-2xl">
+        </div>
+      </div>
+
+      <!--CONTENEDOR DE PAQUETES -->
+      <div class="pt-16 md:pt-20">
+        <h1 class="text-2xl md:text-3xl font-semibold text-center tracking-wide mb-10 md:mb-15">
+          PAQUETES DE <span class="text-titulos">CONTENIDO</span>
+        </h1>
+        
+        <!--CONTENEDOR DE CARDS PAQUETES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+          
+          <!--CARD PAQUETE 1 -->
+          <div class="border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full">
+            <div class="text-center">
+              <span class="text-xl font-light tracking-wide block">BRAND</span>
+              <h3 class="text-3xl font-semibold text-titulos tracking-wide">LAUNCH</h3>
+              <p class="text-textos font-normal text-sm mt-5">
+                Para negocios que comienzan a construir su presencia digital.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-sm">
+              <div class="flex items-center gap-4">
+                <span>LAUNCHLAUNCHLAUNCH</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <span>LAUNCHLAUNCHLAUNCH</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <span>LAUNCHLAUNCHLAUNCH</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-5 mt-auto">
+              <div class="font-bold text-4xl tracking-wide">$000.00<span class="text-xl font-medium ml-1">MXN</span></div>
+              <p class="font-normal text-xs tracking-wide text-textos">Lapso de 3 a 4 semanas</p>
+              <button class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer">
+                ADQUIRIR
+              </button>
+            </div>
+          </div>
+
+          <!--CARD PAQUETE 2 -->
+          <div class="border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full">
+            <div class="text-center">
+              <span class="text-xl font-light tracking-wide block">BRAND</span>
+              <h3 class="text-3xl font-semibold text-titulos tracking-wide">360</h3>
+              <p class="text-textos font-normal text-sm mt-5">
+                Para marcas que buscan incrementar su alcance y posicionamiento.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-sm">
+              <div class="flex items-center gap-4">
+                <span>360360360360360360</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <span>360360360360360360360</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <span>360360360360360360360</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <span>360360360360360360360</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-5 mt-auto">
+              <div class="font-bold text-4xl tracking-wide">$000.00<span class="text-xl font-medium ml-1">MXN</span></div>
+              <p class="font-normal text-xs tracking-wide text-textos">Lapso de 3 a 4 semanas</p>
+              <button class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer">
+                ADQUIRIR
+              </button>
+            </div>
+          </div>
+
+          <!--CARD PAQUETE 3 -->
+          <div class="border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full md:col-span-2 lg:col-span-1">
+            <div class="text-center">
+              <span class="text-xl font-light tracking-wide block">BRAND</span>
+              <h3 class="text-3xl font-semibold text-titulos tracking-wide">GROWTH</h3>
+              <p class="text-textos font-normal text-sm mt-5">
+                Para empresas que buscan una estrategia integral de contenido.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-sm">
+              <div class="flex items-center gap-4">
+                <span>GROWTHGROWTHGROWTHGROWT</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <span>GROWTHGROWTHGROWTHGROWT</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <span>GROWTHGROWTHGROWTHGROWT</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-5 mt-auto">
+              <div class="font-bold text-4xl tracking-wide">$000.00<span class="text-xl font-medium ml-1">MXN</span></div>
+              <p class="font-normal text-xs tracking-wide text-textos">Lapso de 3 a 4 semanas</p>
+              <button class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer">
+                ADQUIRIR
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+    </div>
+    <Contacto/>
   </main>
 </MainLayout>

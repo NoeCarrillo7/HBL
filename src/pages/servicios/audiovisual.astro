@@ -1,11 +1,65 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import HeroServicios from '../../components/HeroServicios.astro';
+
+import fotografia from '../../assets/servicios/fotografia.png'
+import icon_fotografia1 from '../../assets/servicios/icon-fotografia1.png'
+import icon_fotografia2 from '../../assets/servicios/icon-fotografia2.png'
+import icon_fotografia3 from '../../assets/servicios/icon-fotografia3.png'
+import icon_fotografia4 from '../../assets/servicios/icon-fotografia4.png'
+
+
 ---
 <MainLayout title="HBL - Audiovisual">
   <HeroServicios servicioActivo="audiovisual" />
-  <main style="padding: 3rem; text-align: center;">
-    <h1>AUDIOVISUAL</h1>
-    <p>Contenido y paquetes específicos de Audiovisual...</p>
+  <main class="flex flex-col items-center">
+    <div class="w-4/5 mt-30">
+      <div>
+        <h1 class="text-3xl font-bold mb-5 tracking-wide" >CONTENIDO <span class="text-titulos">AUDIOVISUAL</span></h1>
+        <p class="text-textos font-normal text-base md:text-lg tracking-wide leading-relaxe">
+          Producimos contenido visual de alta calidad para fortalecer la presencia de tu marca, 
+          comunicar tu propuesta de valor y conectar con tu audiencia a través de fotografía, video y edición profesional.
+        </p>
+      </div>
+
+
+      <div class="relative grid grid-cols-1 md:grid-cols-2 gap-50 items-center mt-10">
+        <div class="absolute md:col-span-2 inset-0 flex justify-center items-center z-0 pointer-events-none">
+          <img 
+            src={fotografia.src} 
+            alt="Cámara de fondo" 
+            class="w-full max-w-xl object-contain opacity-40 md:opacity-100" 
+          />
+        </div>
+
+        <div class="relative z-10 flex flex-col space-y-16 md:space-y-64">
+          <div>
+            <img src={icon_fotografia1.src} alt="">
+            <h3 class="text-lg font-normal mt-6 mb-2">Sesiones Fotográficas Profesionales</h3>
+            <p class="text-textos font-light text-sm">Fotografía de producto, gastronómica, corporativa, inmobiliaria y para campañas publicitarias.</p>
+          </div>
+          <div>
+            <img src={icon_fotografia2.src} alt="">
+            <h3 class="text-lg font-normal mt-6 mb-2">Videos Corporativos y Promocionales</h3>
+            <p class="text-textos font-light text-sm">Videos institucionales, testimoniales, de presentación de empresa, productos o servicios.</p>
+          </div>
+        </div>
+
+        <div class="relative z-10 space-y-16 md:space-y-64 text-right">
+          <div>
+            <img src={icon_fotografia3.src} alt="" class="block ml-auto">
+            <h3 class="text-lg font-normal mt-6 mb-2">Contenido para Redes Sociales</h3>
+            <p class="text-textos font-light text-sm">Producción de reels, videos verticales, contenido para TikTok, Instagram, Facebook y otras plataformas digitales.</p>
+          </div>
+          <div>
+            <img src={icon_fotografia4.src} alt="" class="block ml-auto">
+            <h3 class="text-lg font-normal mt-6 mb-2">Edición y Postproducción de Material Existente</h3>
+            <p class="text-textos font-light text-sm">Edición profesional de fotografías y videos proporcionados por el cliente, incluyendo corrección de color, audio, subtítulos y optimización para diferentes formatos.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
   </main>
 </MainLayout>
