@@ -1,29 +1,30 @@
 ---
-//Como la pagina de inicio se escribe sobre el MainLayout ya no es necesario importar los componentes por que esos 
+//Como la pagina de inicio se escribe sobre el MainLayout ya no es necesario importar los componentes por que esos
 //ya estan importados alla
-import MainLayout from '../layouts/MainLayout.astro';
-import Contacto from '../components/Contacto.astro';
-import Acercade from '../pages/inicio/Acercade.astro';
-import fondo from '../assets/hero/s1-elemento1.jpg';
+import MainLayout from "../layouts/MainLayout.astro";
+import Contacto from "../components/Contacto.astro";
+import Acercade from "../pages/inicio/Acercade.astro";
+import Cardservicios from "../pages/inicio/Cardservicios.astro";
+import fondo from "../assets/hero/s1-elemento1.jpg";
 ---
 
 <MainLayout title="HBL - Inicio">
-
   <main
-  class="relative min-h-[45vh] md:min-h-[90vh] flex flex-col justify-start md:justify-center items-center text-center px-4 bg-cover bg-center bg-no-repeat"
+    class="relative min-h-[45vh] md:min-h-[90vh] flex flex-col justify-start md:justify-center items-center text-center px-4 bg-cover bg-center bg-no-repeat"
+  >
+    <img
+      src={fondo.src}
+      alt="Fondo hero"
+      class="absolute inset-0 w-full h-full object-cover object-top md:object-center"
+    />
 
->
-<img
-    src={fondo.src}
-    alt="Fondo hero"
-    class="absolute inset-0 w-full h-full object-cover object-top md:object-center"
-  />
-
-
-   <div class="relative z-10 pt-24 md:pt-0">
-
-      <h2 class="text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-5 leading-none tracking-wide">
-        TRANSFORMAMOS LA <br> HISTORIA DE <span class="text-titulos">TU MARCA </span>
+    <div class="relative z-10 pt-24 md:pt-0">
+      <h2
+        class="text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-5 leading-none tracking-wide"
+      >
+        TRANSFORMAMOS LA <br /> HISTORIA DE <span class="text-titulos"
+          >TU MARCA
+        </span>
       </h2>
 
       <p class="text-textos text-base sm:text-lg max-w-xl mx-auto">
@@ -31,15 +32,16 @@ import fondo from '../assets/hero/s1-elemento1.jpg';
       </p>
 
       <div class="mt-8">
-        <a class="px-6 py-3 bg-[#4F119F] hover:bg-[#5f18bd] text-white rounded-full my-10 font-medium tracking-wide transition-colors" href="/servicios/branding">
+        <a
+          class="px-6 py-3 bg-[#4F119F] hover:bg-[#5f18bd] text-white rounded-full my-10 font-medium tracking-wide transition-colors"
+          href="/servicios/branding"
+        >
           VER SERVICIOS
         </a>
       </div>
-
     </div>
   </main>
-
+  <Cardservicios />
   <Acercade />
   <Contacto />
-
 </MainLayout>

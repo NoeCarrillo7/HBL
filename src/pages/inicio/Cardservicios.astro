@@ -1,0 +1,283 @@
+---
+// src/pages/inicio/Cardservicios.astro
+
+import c1 from "../../assets/cardservicios/c1.jpg";
+import c2 from "../../assets/cardservicios/c2.jpg";
+import c3 from "../../assets/cardservicios/c3.jpg";
+import c4 from "../../assets/cardservicios/c4.jpg";
+import c5 from "../../assets/cardservicios/c5.jpg";
+import c6 from "../../assets/cardservicios/c6.jpg";
+---
+
+<section class="relative bg-black text-white">
+    <!-- TITULO -->
+    <div class="text-center mb-3 md:mb-4">
+        <h2 class="text-3xl md:text-5xl font-bold">
+            NUESTROS <span class="text-purple-500">SERVICIOS</span>
+        </h2>
+        <p class="text-textos mt-4 max-w-xl mx-auto">
+            Creamos soluciones digitales estratégicas para tu marca.
+        </p>
+    </div>
+
+    <!-- CONTAINER SCROLL -->
+    <div class="h-[400vh] md:h-[600vh]">
+        <div
+            class="sticky top-0 md:top-[120px] h-[100svh] md:h-[calc(100vh-100px)] flex items-center justify-center"
+        >
+            <div
+                class="relative w-full max-w-5xl h-[300px] sm:h-[340px] md:h-[500px] px-4 md:px-0"
+            >
+                <!-- CARD 1 -->
+                <a
+                    href="/servicios/branding"
+                    class="card w-full h-[280px] sm:h-[320px] md:h-[400px]  bg-cover bg-center relative"
+                    style={`background-image: url(${c1.src}); --i:0`}
+                >
+                    <div class="absolute inset-0 bg-black/80"></div>
+                    <div
+                        class="relative p-4 sm:p-5 md:p-10 h-full flex flex-col justify-end"
+                    >
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold flex flex-col sm:flex-row gap-1 sm:gap-2">
+                            BRANDING -
+                            <span class="text-titulos">IDENTIDAD DE MARCA</span>
+                        </h3>
+                        <p class="text-xs sm:text-sm md:text-base text-textos leading-snug md:leading-normal">
+                            No todos los negocios necesitan lo mismo, por eso
+                            nuestros paquetes incluyen una cantidad determinada
+                            de piezas de diseño que puedes utilizar en los
+                            materiales que más necesites.
+                        </p>
+
+                        <div class="flex justify-end">
+                            <span
+                                class="mt-3 md:mt-4 text-sm md:text-base text-titulos flex items-center gap-2"
+                            >
+                                Ver servicio →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <!-- CARD 2 -->
+                <a
+                    href="/servicios/branding"
+                    class="card w-full max-w-5xl h-[400px] bg-cover bg-center relative"
+                    style={`background-image: url(${c2.src}); --i:1`}
+                >
+                    <div class="absolute inset-0 bg-black/80"></div>
+
+                    <div class="relative p-10 h-full flex flex-col justify-end">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold flex flex-col sm:flex-row gap-1 sm:gap-2">
+                            SOCIAL MEDIA  - CREACIÓN DE CONTENIDO
+                            <span class="text-titulos"
+                                >+ GESTIÓN ESTRATÉGICA</span
+                            >
+                        </h3>
+
+                        <p class="text-xs sm:text-sm md:text-base text-textos leading-snug md:leading-normal">
+                            Transformamos tus redes sociales en una herramienta
+                            de crecimiento para tu negocio. Desarrollamos
+                            estrategias, contenido visual y planes de
+                            publicación que aumentan la visibilidad de tu marca,
+                            fortalecen la relación con tus clientes y generan
+                            oportunidades reales de venta.
+                        </p>
+
+                        <div class="flex justify-end">
+                            <span
+                                class="mt-3 md:mt-4 text-sm md:text-base text-titulos flex items-center gap-2"
+                            >
+                                Ver servicio →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <!-- CARD 3 -->
+                <a
+                    href="/servicios/branding"
+                    class="card w-full max-w-5xl h-[400px] bg-cover bg-center relative"
+                    style={`background-image: url(${c3.src}); --i:2`}
+                >
+                    <div class="absolute inset-0 bg-black/80"></div>
+
+                    <div class="relative p-10 h-full flex flex-col justify-end">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold flex flex-col sm:flex-row gap-1 sm:gap-2">
+                            CONTENIDO <span class="text-titulos"
+                                >AUDIOVISUAL</span
+                            >
+                        </h3>
+                        <p class="text-xs sm:text-sm md:text-base text-textos leading-snug md:leading-normal">
+                            Producimos contenido visual de alta calidad para
+                            fortalecer la presencia de tu marca, comunicar tu
+                            propuesta de valor y conectar con tu audiencia a
+                            través de fotografía, video y edición profesional.
+                        </p>
+
+                        <div class="flex justify-end">
+                            <span
+                                class="mt-3 md:mt-4 text-sm md:text-base text-titulos flex items-center gap-2"
+                            >
+                                Ver servicio →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <!-- CARD 4 -->
+                <a
+                    href="/servicios/branding"
+                    class="card w-full max-w-5xl h-[400px] bg-cover bg-center relative"
+                    style={`background-image: url(${c4.src}); --i:3`}
+                >
+                    <div class="absolute inset-0 bg-black/80"></div>
+
+                    <div class="relative p-10 h-full flex flex-col justify-end">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold flex flex-col sm:flex-row gap-1 sm:gap-2">
+                            MARKETING DIGITAL, CRECIMIENTO
+                            <span class="text-titulos"> Y POSICIONAMIENTO</span>
+                        </h3>
+
+                        <p class="text-xs sm:text-sm md:text-base text-textos leading-snug md:leading-normal">
+                            Diseñamos estrategias digitales enfocadas en
+                            aumentar tu visibilidad, atraer nuevos clientes y
+                            fortalecer la relación con quienes ya conocen tu
+                            marca.
+                        </p>
+
+                        <div class="flex justify-end">
+                            <span
+                                class="mt-3 md:mt-4 text-sm md:text-base text-titulos flex items-center gap-2"
+                            >
+                                Ver servicio →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <!-- CARD 5 -->
+                <a
+                    href="/servicios/branding"
+                    class="card w-full max-w-5xl h-[400px] bg-cover bg-center relative"
+                    style={`background-image: url(${c5.src}); --i:4`}
+                >
+                    <div class="absolute inset-0 bg-black/80"></div>
+
+                    <div class="relative p-10 h-full flex flex-col justify-end">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold flex flex-col sm:flex-row gap-1 sm:gap-2">
+                            DISEÑO WEB
+                            <span class="text-titulos">
+                                Y CREACIÓN DE PÁGINAS WEB</span
+                            >
+                        </h3>
+                        <p class="text-xs sm:text-sm md:text-base text-textos leading-snug md:leading-normal">
+                            Creamos experiencias digitales que combinan diseño
+                            estratégico, alto rendimiento y automatización
+                            inteligente para optimizar procesos, mejorar la
+                            experiencia de usuario, y generar resultados reales
+                            para tu negocio.
+                        </p>
+
+                        <div class="flex justify-end">
+                            <span
+                                class="mt-3 md:mt-4 text-sm md:text-base text-titulos flex items-center gap-2"
+                            >
+                                Ver servicio →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <!-- CARD 6 -->
+                <a
+                    href="/servicios/branding"
+                    class="card w-full max-w-5xl h-[400px] bg-cover bg-center relative"
+                    style={`background-image: url(${c6.src}); --i:6`}
+                >
+                    <div class="absolute inset-0 bg-black/80"></div>
+
+                    <div class="relative p-10 h-full flex flex-col justify-end">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold flex flex-col sm:flex-row gap-1 sm:gap-2">
+                            ASESORIA 1:1
+                            <span class="text-titulos">
+                                ESTRATEGIAS PERSONALIZADAS</span
+                            >
+                        </h3>
+                        <p class="text-xs sm:text-sm md:text-base text-textos leading-snug md:leading-normal">
+                            Analizamos tu negocio y diseñamos una estrategia
+                            personalizada para impulsar su crecimiento y
+                            alcanzar tus objetivos.
+                        </p>
+
+                        <div class="flex justify-end">
+                            <span
+                                class="mt-3 md:mt-4 text-sm md:text-base text-titulos flex items-center gap-2"
+                            >
+                                Ver servicio →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .card {
+        position: absolute;
+        inset: 0;
+        border-radius: 1.5rem;
+        opacity: 0;
+        transform: scale(0.95) translateY(40px);
+        transition: all 0.6s ease;
+    }
+
+    .card.active {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        z-index: 50;
+    }
+
+    .card:nth-child(1) {
+        z-index: 6;
+    }
+    .card:nth-child(2) {
+        z-index: 5;
+    }
+    .card:nth-child(3) {
+        z-index: 4;
+    }
+    .card:nth-child(4) {
+        z-index: 3;
+    }
+    .card:nth-child(5) {
+        z-index: 2;
+    }
+    .card:nth-child(6) {
+        z-index: 1;
+    }
+</style>
+
+<!-- FUNCIONALIDAD DE LAS CARD -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const section = document.querySelector("section");
+        const cards = document.querySelectorAll(".card");
+
+        window.addEventListener("scroll", () => {
+            if (!section) return;
+            const rect = section.getBoundingClientRect();
+
+            // progreso dentro de la sección
+            const progress = Math.min(
+                1,
+                Math.max(
+                    0,
+                    -rect.top / (section.offsetHeight - window.innerHeight),
+                ),
+            );
+
+            const index = Math.floor(progress * cards.length);
+            cards.forEach((card, i) => {
+                card.classList.toggle("active", i === index);
+            });
+        });
+    });
+</script>
