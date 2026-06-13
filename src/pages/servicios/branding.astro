@@ -1,130 +1,198 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import HeroServicios from "../../components/HeroServicios.astro";
+
+import icon_check from '../../assets/servicios/icon-check.png';
+import creditos1 from '../../assets/servicios/creditos1.png';
+import creditos2 from '../../assets/servicios/creditos2.png';
 ---
 
 <MainLayout title="HBL - Branding">
   <HeroServicios servicioActivo="branding" />
-  <main class="container-branding">
-    <div>
-      <h1>BRANDING - <span>IDENTIDAD DE MARCA</span></h1>
-      <p>
-        No todos los negocios necesitan lo mismo, por eso nuestros paquetes
-        incluyen una cantidad determinada de piezas de diseño que puedes
-        utilizar en los materiales que más necesites.
-      </p>
-    </div>
+  <main>
 
-    <div class="content-paquetes">
-      <h2 class="section-title">
-        PAQUETES DE <span>CONTENIDO</span>
-      </h2>
+    <!--CONTENEDOR PRINCIPAL -->
+    <div class="w-full max-w-7xl mx-auto px-4 md:[8%] pt-16 md:pt-30">
+      
+      <!--TITULO Y DESCRIPCION -->
+      <div class="max-w-7xl">
+        <h1 class="text-3xl md:text-4xl font-bold mb-5 tracking-wide">
+          BRANDING - <span class="text-titulos">IDENTIDAD DE MARCA</span>
+        </h1>
+        <p class="text-textos font-normal text-base md:text-lg tracking-wide leading-relaxed">
+          No todos los negocios necesitan lo mismo, por eso nuestros paquetes
+          incluyen una cantidad determinada de piezas de diseño que puedes
+          utilizar en los materiales que más necesites.
+        </p>
+      </div>
 
-      <div class="packages-grid">
-        <div class="package-card">
-          <div class="card-header">
-            <span class="brand-tag">BRAND</span>
-            <h3 class="card-title">ESSENTIALS</h3>
-            <p class="card-subtitle">Para negocios que están comenzando</p>
+      <!--CONTENEDOR DE PAQUETES -->
+      <div class="pt-16 md:pt-20">
+        <h1 class="text-2xl md:text-3xl font-semibold text-center tracking-wide mb-10 md:mb-15">
+          PAQUETES DE <span class="text-titulos">CONTENIDO</span>
+        </h1>
+        
+        <!--CONTENEDOR DE CARDS PAQUETES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+          
+          <!--CARD PAQUETE 1 -->
+          <div class="border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full">
+            <div class="text-center">
+              <span class="text-xl font-light tracking-wide block">BRAND</span>
+              <h3 class="text-3xl font-semibold text-titulos tracking-wide">ESSENTIALS</h3>
+              <p class="text-textos font-normal text-sm mt-5">
+                Para negocios que están comenzando
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-sm">
+              <div class="flex items-center gap-4">
+                <img src={icon_check.src} alt="icon check" class="w-5 h-5 shrink-0 object-contain">
+                <span>Logotipo + Brandboard</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src={icon_check.src} alt="icon check" class="w-5 h-5 shrink-0 object-contain">
+                <span>Guía básica de marca</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src={icon_check.src} alt="icon check" class="w-5 h-5 shrink-0 object-contain">
+                <span>3 créditos de diseño</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-5 mt-auto">
+              <div class="font-bold text-4xl tracking-wide">$000.00<span class="text-xl font-medium ml-1">MXN</span></div>
+              <p class="font-normal text-xs tracking-wide text-textos">Lapso de 3 a 4 semanas</p>
+              <button class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer">
+                ADQUIRIR
+              </button>
+            </div>
           </div>
 
-          <ul class="card-features">
-            <li>Logotipo + Brandboard</li>
-            <li>Guía básica de marca</li>
-            <li>3 créditos de diseño</li>
-          </ul>
+          <!--CARD PAQUETE 1 -->
+          <div class="border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full">
+            <div class="text-center">
+              <span class="text-xl font-light tracking-wide block">BRAND</span>
+              <h3 class="text-3xl font-semibold text-titulos tracking-wide">360</h3>
+              <p class="text-textos font-normal text-sm mt-5">
+                Para marcas que buscan crecer
+              </p>
+            </div>
 
-          <div class="card-footer">
-            <div class="card-price">$000.00<span>MXN</span></div>
-            <p class="card-delivery">Lapso de 3 a 4 semanas</p>
-            <button class="card-btn">ADQUIRIR</button>
-          </div>
-        </div>
+            <div class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-sm">
+              <div class="flex items-center gap-4">
+                <img src={icon_check.src} alt="icon check" class="w-5 h-5 shrink-0 object-contain">
+                <span>Estrategia de branding</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src={icon_check.src} alt="icon check" class="w-5 h-5 shrink-0 object-contain">
+                <span>Brandbook completo</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src={icon_check.src} alt="icon check" class="w-5 h-5 shrink-0 object-contain">
+                <span>12 créditos de diseño</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src={icon_check.src} alt="icon check" class="w-5 h-5 shrink-0 object-contain">
+                <span>Asesoría de implementación</span>
+              </div>
+            </div>
 
-        <div class="package-card featured">
-          <div class="card-header">
-            <span class="brand-tag">BRAND</span>
-            <h3 class="card-title">360</h3>
-            <p class="card-subtitle">Para marcas que buscan crecer</p>
-          </div>
-
-          <ul class="card-features">
-            <li>Estrategia de branding</li>
-            <li>Brandbook completo</li>
-            <li>12 créditos de diseño</li>
-            <li>Asesoría de implementación</li>
-          </ul>
-
-          <div class="card-footer">
-            <div class="card-price">$000.00<span>MXN</span></div>
-            <p class="card-delivery">Lapso de 3 a 4 semanas</p>
-            <button class="card-btn">ADQUIRIR</button>
-          </div>
-        </div>
-
-        <div class="package-card">
-          <div class="card-header">
-            <span class="brand-tag">BRAND</span>
-            <h3 class="card-title">GROWTH</h3>
-            <p class="card-subtitle">
-              Para una implementación completa de marca
-            </p>
+            <div class="flex flex-col items-center gap-5 mt-auto">
+              <div class="font-bold text-4xl tracking-wide">$000.00<span class="text-xl font-medium ml-1">MXN</span></div>
+              <p class="font-normal text-xs tracking-wide text-textos">Lapso de 3 a 4 semanas</p>
+              <button class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer">
+                ADQUIRIR
+              </button>
+            </div>
           </div>
 
-          <ul class="card-features">
-            <li>Identidad visual completa</li>
-            <li>Brandbook básico</li>
-            <li>6 créditos de diseño</li>
-          </ul>
+          <!--CARD PAQUETE 1 -->
+          <div class="border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full md:col-span-2 lg:col-span-1">
+            <div class="text-center">
+              <span class="text-xl font-light tracking-wide block">BRAND</span>
+              <h3 class="text-3xl font-semibold text-titulos tracking-wide">GROWTH</h3>
+              <p class="text-textos font-normal text-sm mt-5">
+                Para una implementación de marca
+              </p>
+            </div>
 
-          <div class="card-footer">
-            <div class="card-price">$000.00<span>MXN</span></div>
-            <p class="card-delivery">Lapso de 3 a 4 semanas</p>
-            <button class="card-btn">ADQUIRIR</button>
+            <div class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-sm">
+              <div class="flex items-center gap-4">
+                <img src={icon_check.src} alt="icon check" class="w-5 h-5 shrink-0 object-contain">
+                <span>Identidad visual completa</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src={icon_check.src} alt="icon check" class="w-5 h-5 shrink-0 object-contain">
+                <span>Brandbook básico</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src={icon_check.src} alt="icon check" class="w-5 h-5 shrink-0 object-contain">
+                <span>6 créditos de diseño</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-5 mt-auto">
+              <div class="font-bold text-4xl tracking-wide">$000.00<span class="text-xl font-medium ml-1">MXN</span></div>
+              <p class="font-normal text-xs tracking-wide text-textos">Lapso de 3 a 4 semanas</p>
+              <button class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer">
+                ADQUIRIR
+              </button>
+            </div>
           </div>
         </div>
       </div>
+
+
+
+      <div class="w-full">
+
+        <div class="max-w-7xl text-right mt-25 mb-16 md:mb-20">
+          <h2 class="text-2xl md:text-3xl font-bold mb-5 tracking-wide uppercase">
+            ¿CÓMO FUNCIONAN LOS <span class="text-titulos">CRÉDITOS?</span>
+          </h2>
+          <p class="text-textos font-normal text-base md:text-lg tracking-wide leading-relaxed max-w-3xl ml-auto">
+            Cada crédito puede utilizarse para diseñar los materiales que mejor se adapten a tu negocio.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mt-12">
+          <div class="group relative overflow-hidden rounded-2xl border border-zinc-800/50 bg-zinc-950 aspect-[4/3] md:aspect-video cursor-pointer">
+            <img 
+              src={creditos1.src} 
+              alt="Materiales de branding corporativo" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/70 transition-colors duration-300"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 md:p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-black via-black/90 to-transparent">
+              <h3 class="text-xl font-bold text-white mb-2">Identidad Corporativa</h3>
+              <p class="text-sm text-zinc-300 font-light leading-relaxed">
+                Identidad CorporativaIdentidad CorporativaIdentidad CorporativaIdentidad CorporativaIdentidad CorporativaIdentidad CorporativaIdentidad Corporativa
+              </p>
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden rounded-2xl border border-zinc-800/50 bg-zinc-950 aspect-[4/3] md:aspect-video cursor-pointer">
+            <img 
+              src={creditos2.src} 
+              alt="Papelería y manual de marca" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/70 transition-colors duration-300"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 md:p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-black via-black/90 to-transparent">
+              <h3 class="text-xl font-bold text-white mb-2">Aplicaciones de Marca</h3>
+              <p class="text-sm text-zinc-300 font-light leading-relaxed">
+                Aplicaciones de MarcaAplicaciones de MarcaAplicaciones de MarcaAplicaciones de MarcaAplicaciones de MarcaAplicaciones de Marca
+              </p>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+
+
+
     </div>
   </main>
 </MainLayout>
-
-<style>
-  .container-branding {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .container-branding div {
-    width: 80%;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h1 span {
-    color: #8b5cf6;
-  }
-
-  .content-paquetes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid turquoise;
-  }
-
-  .section-title span{
-    color: #8b5cf6;
-  }
-
-  .packages-grid{
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    border: 1px solid white;
-  }
-  .package-card{
-    border: 1px solid #8b5cf6;
-  }
-</style>
