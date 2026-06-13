@@ -13,9 +13,9 @@ const servicios = [
 
 <section
   id="contacto"
-  class="bg-gradient-to-b from-black via-[#050505] to-black py-12 px-6"
+  class="py-12 px-6"
 >
-  <div class="max-w-5xl mx-auto">
+  <div class="w-4/5 mx-auto">
     <!-- TITULO -->
 
     <div class="text-center mb-8">
@@ -32,10 +32,10 @@ const servicios = [
       </h3>
     </div>
 
-    <div class="grid lg:grid-cols-[280px_1fr] gap-4 lg:gap-6">
+    <div class="grid lg:grid-cols-[320px_1fr] gap-4 lg:gap-6">
       <!-- RECUADRO HABLEMOS-->
       <div
-        class="border-1 border-titulos rounded-[5px] p-5 md:p-6 backdrop-blur-sm bg-white/[0.02]"
+        class="border border-principal rounded-xl p-5 px-10"
       >
         <h4 class="text-titulos text-2xl font-light mb-8">Hablemos</h4>
 
@@ -44,7 +44,7 @@ const servicios = [
             <i class="fa-solid fa-phone text-titulos text-lg mt-1"></i>
             <div>
               <p class="text-white font-semibold">Teléfono</p>
-              <p class="text-textos font-light1">+52 000 000 0000</p>
+              <p class="text-textos text-xs font-light">+52 000 000 0000</p>
             </div>
           </div>
 
@@ -52,7 +52,7 @@ const servicios = [
             <i class="fa-solid fa-envelope text-titulos text-lg mt-1"></i>
             <div>
               <p class="text-white font-semibold">Correo electrónico</p>
-              <p class="text-textos font-light1 break-all">
+              <p class="text-textos text-xs font-light break-all">
                 contacto@horecabrandinglab.com
               </p>
             </div>
@@ -62,7 +62,7 @@ const servicios = [
             <i class="fa-solid fa-location-dot text-titulos text-lg mt-1"></i>
             <div>
               <p class="text-white font-semibold">Ubicación</p>
-              <p class="text-textos font-light1">Querétaro, México</p>
+              <p class="text-textos text-xs font-light">Querétaro, México</p>
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ const servicios = [
         </div>
 
         <div class="input-contacto">
-          <p class="text-gray-400 text-sm mb-2">Servicios que te interesan</p>
+          <p class="text-textos text-sm mb-2">Servicios que te interesan</p>
 
           <div class="flex flex-wrap gap-2">
             {
@@ -132,12 +132,12 @@ const servicios = [
 
         <button
           type="submit"
-          class="w-full py-5 rounded-[5px] font-light5 uppercase text-white bg-gradient-to-r from-titulos to-[#A855F7] hover:scale-[1.01] transition-all duration-300"
+          class="w-full py-5 rounded-[5px] font-light5 uppercase text-white bg-gradient-to-r from-titulos to-[#4F119F] hover:scale-[1.01] transition-all duration-300"
         >
           Enviar información
         </button>
 
-        <p class="text-center text-gray-500 text-sm">
+        <p class="text-center text-textos text-sm">
           <i class="fa-solid fa-user-shield text-titulos"></i>
           Tu información está segura con nosotros
         </p>
@@ -149,17 +149,17 @@ const servicios = [
 <style>
   .input-contacto {
     width: 100%;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgb(139, 92, 246);
+    border: 1px solid var(--color-principal);
     border-radius: 5px;
-    padding: 0.4rem 0.9rem;
+    padding: 0.7rem 2rem;
     color: white;
     outline: none;
     transition: all 0.3s ease;
   }
 
   .input-contacto::placeholder {
-    color: #9ca3af;
+    color: var(--color-textos);
+    font-size: 0.875rem;
   }
 
   .input-contacto:focus {
