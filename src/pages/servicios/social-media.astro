@@ -14,11 +14,11 @@ import beneficios from '../../assets/servicios/beneficios.png'
 <MainLayout title="HBL - Social Media">
   <HeroServicios servicioActivo="social-media" />
   <main class="flex flex-col items-center">
-    <div class="w-4/5 mt-30">
+    <div class="w-4/5 mb-10 md:mb-30 mt-20 md:mt-30">
 
       <div>
-        <h1 class="text-3xl font-bold mb-5 tracking-wide" >SOCIAL MEDIA - CREACIÓN DE CONTENIDO + GESTIÓN ESTRATÉGICA</h1>
-        <p class="text-textos font-normal text-base md:text-lg tracking-wide leading-relaxe">Transformamos tus redes sociales en una herramienta de crecimiento para tu negocio. 
+        <h1 class="text-2xl md:text-3xl font-bold mb-5 tracking-wide" >SOCIAL MEDIA - CREACIÓN DE CONTENIDO + GESTIÓN ESTRATÉGICA</h1>
+        <p class="text-textos font-normal text-xs md:text-lg tracking-wide leading-relaxe">Transformamos tus redes sociales en una herramienta de crecimiento para tu negocio. 
           Desarrollamos estrategias, contenido visual y planes de publicación que aumentan la 
           visibilidad de tu marca, fortalecen la relación con tus clientes y generan oportunidades reales de venta.
         </p>
@@ -27,26 +27,26 @@ import beneficios from '../../assets/servicios/beneficios.png'
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-15 gap-10">
         <div class="flex flex-col gap-7">
-          <h1 class="text-2xl font-normal  tracking-wide">Beneficios:</h1>
-          <div class="flex gap-5 ml-10">
+          <h1 class="text-base md:text-2xl font-normal  tracking-wide">Beneficios:</h1>
+          <div class="flex gap-5 md:ml-10">
             <img src={icon_benficios1.src} alt="" class="w-5 h-5 shrink-0 object-contain">
-            <p class="text-textos font-normal text-base tracking-wider">Estrategia de contenido alineada con tus objetivos.</p>
+            <p class="text-textos font-normal text-xs md:text-base tracking-wider">Estrategia de contenido alineada con tus objetivos.</p>
           </div>
-          <div class="flex gap-5 ml-10">
+          <div class="flex gap-5 md:ml-10">
             <img src={icon_benficios2.src} alt="" class="w-5 h-5 shrink-0 object-contain">
-            <p class="text-textos font-normal text-base tracking-wider">Creación de contenido atractivo y relevante.</p>
+            <p class="text-textos font-normal text-xs md:text-base tracking-wider">Creación de contenido atractivo y relevante.</p>
           </div>
-          <div class="flex gap-5 ml-10">
+          <div class="flex gap-5 md:ml-10">
             <img src={icon_benficios3.src} alt="" class="w-5 h-5 shrink-0 object-contain">
-            <p class="text-textos font-normal text-base tracking-wider">Planificación mensual para mantener consistencia.</p>
+            <p class="text-textos font-normal text-xs md:text-base tracking-wider">Planificación mensual para mantener consistencia.</p>
           </div>
-          <div class="flex gap-5 ml-10">
+          <div class="flex gap-5 md:ml-10">
             <img src={icon_benficios4.src} alt="" class="w-5 h-5 shrink-0 object-contain">
-            <p class="text-textos font-normal text-base tracking-wider">Gestión activa de tu comunidad digital.</p>
+            <p class="text-textos font-normal text-xs md:text-base tracking-wider">Gestión activa de tu comunidad digital.</p>
           </div>
-          <div class="flex gap-5 ml-10">
+          <div class="flex gap-5 md:ml-10">
             <img src={icon_benficios5.src} alt="" class="w-5 h-5 shrink-0 object-contain">
-            <p class="text-textos font-normal text-base tracking-wider">Planes flexibles adaptados a las necesidades de tu negocio.</p>
+            <p class="text-textos font-normal text-xs md:text-base tracking-wider">Planes flexibles adaptados a las necesidades de tu negocio.</p>
           </div>
         </div>
         <div>
@@ -164,6 +164,7 @@ import beneficios from '../../assets/servicios/beneficios.png'
 
 
     </div>
-    <Contacto/>
   </main>
+  <Contacto/>
+
 </MainLayout>

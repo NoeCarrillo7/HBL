@@ -1,11 +1,111 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import HeroServicios from '../../components/HeroServicios.astro';
+import Contacto from '../../components/Contacto.astro';
+
+import marketing from '../../assets/servicios/marketing.png';
+import mk_icon1 from '../../assets/servicios/mk-icon1.png';
+import mk_icon2 from '../../assets/servicios/mk-icon2.png';
+import mk_icon3 from '../../assets/servicios/mk-icon3.png';
+import mk_icon4 from '../../assets/servicios/mk-icon4.png';
+import mk_icon5 from '../../assets/servicios/mk-icon5.png';
+import mk_icon6 from '../../assets/servicios/mk-icon6.png';
+import mk_icon7 from '../../assets/servicios/mk-icon7.png';
+
 ---
 <MainLayout title="HBL - MARKETING">
   <HeroServicios servicioActivo="marketing" />
-  <main style="padding: 3rem; text-align: center;">
-    <h1>AUDIOVISUAL</h1>
-    <p>Contenido y paquetes específicos de Audiovisual...</p>
+  <main class="flex flex-col items-center">
+    <div class="w-4/5 mt-20 md:mt-30 grid grid-cols-1 md:grid-cols-2">
+
+      <!--CONTENEDOR IZQUIERO (INFORMACION) -->
+      <div>
+        <div>
+          <h1 class="text-2xl md:text-4xl font-bold mb-5 tracking-wider">
+            MARKETING DIGITAL CRECIMIENTO <span class="text-titulos">Y POSICIONAMIENTO</span>
+          </h1>
+          <p class="text-textos font-normal text-xs md:text-lg tracking-wide leading-relaxed">
+            Diseñamos estrategias digitales enfocadas en aumentar tu visibilidad, atraer nuevos clientes y 
+            fortalecer la relación con quienes ya conocen tu marca. Combinamos posicionamiento local, publicidad digital, 
+            automatización y análisis para impulsar resultados medibles.
+          </p>
+        </div>
+
+        <h1 class="font-semibold text-sm md:text-xl tracking-wider mt-10 mb-5 md:mt-15 md:mb-10">Presencia digital básica</h1>
+        
+        <!--CONTENEDOR DE LA LISTA -->
+        <div class="flex flex-col gap-5">
+          <!--CONTENEDOR DE ITEMS 1-->
+          <div class="flex gap-5 items-center">
+            <img src={mk_icon1.src} alt="" class="w-5 h-5 object-contain">
+            <div>
+              <h1 class="tracking-wider text-xs md:text-base">Google Business Profile</h1>
+              <p class="text-textos text-xs font-light md:text-base tracking-wider">Optimización de Google Business Profile y visibilidad local.</p>
+            </div>
+          </div>
+          <!--CONTENEDOR DE ITEMS 2-->
+          <div class="flex gap-5 items-center">
+            <img src={mk_icon2.src} alt="" class="w-5 h-5 object-contain">
+            <div>
+              <h1 class="tracking-wider text-xs md:text-base">Gestión de Reputación Digital</h1>
+              <p class="text-textos text-xs font-light md:text-base tracking-wider">Monitoreo y gestión de reseñas.</p>
+            </div>
+          </div>
+          <!--CONTENEDOR DE ITEMS 3-->
+          <div class="flex gap-5 items-center">
+            <img src={mk_icon3.src} alt="" class="w-5 h-5 object-contain">
+            <div>
+              <h1 class="tracking-wider text-xs md:text-base">Publicidad Digital</h1>
+              <p class="text-textos text-xs font-light md:text-base tracking-wider">Campañas en Google Ads y Meta Ads.</p>
+            </div>
+          </div>
+          <!--CONTENEDOR DE ITEMS 4-->
+          <div class="flex gap-5 items-center">
+            <img src={mk_icon4.src} alt="" class="w-5 h-5 object-contain">
+            <div>
+              <h1 class="tracking-wider text-xs md:text-base">Comunicación y seguimiento inteligente</h1>
+              <p class="text-textos text-xs font-light md:text-base tracking-wider">Atención automatizada y seguimiento de clientes.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!--CONTENEDOR DERECHO (IMAGEN) -->
+      <div class="mt-10 md:mt-0 flex items-center">
+        <img src={marketing.src} alt="">
+      </div>
+    </div>
+
+    <!--CONTENEDOR INFERIOR -->
+    <div class="w-4/5 mt-10 md:mt-20 mb-10 md:mb-20">
+      <h1 class="font-semibold text-sm md:text-xl tracking-wider mb-5 md:mb-10">Todos los Proyectos Incluyen:</h1>
+
+      <!--CONTENEDOR DE GRUPOS -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+        <!--GRUPO 1 -->
+        <div class="flex flex-col gap-2">
+          <img src={mk_icon5.src} alt=""  class="w-7 h-7 object-contain">
+          <h1 class="tracking-wider text-xs md:text-base">Análisis Inicial</h1>
+          <p class="text-textos text-xs font-light md:text-sm tracking-wider">Evaluación de tu presencia digital, competencia y oportunidades de crecimiento.</p>
+        </div>
+
+        <!--GRUPO 2 -->
+        <div class="flex flex-col gap-2">
+          <img src={mk_icon6.src} alt=""  class="w-7 h-7 object-contain">
+          <h1 class="tracking-wider text-xs md:text-base">Estrategia</h1>
+          <p class="text-textos text-xs font-light md:text-sm tracking-wider">Definición de objetivos, audiencias y acciones enfocadas en resultados.</p>
+        </div>
+
+        <!--GRUPO 3 -->
+        <div class="flex flex-col gap-2">
+          <img src={mk_icon7.src} alt=""  class="w-7 h-7 object-contain">
+          <h1 class="tracking-wider text-xs md:text-base">Optimización Continua</h1>
+          <p class="text-textos text-xs font-light md:text-sm tracking-wider">Monitoreo, análisis de desempeño y ajustes para maximizar resultados.</p>
+        </div>
+      </div>
+    </div>
   </main>
+  <Contacto/>
 </MainLayout>

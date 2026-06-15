@@ -1,29 +1,34 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import HeroServicios from '../../components/HeroServicios.astro';
+import Contacto from '../../components/Contacto.astro';
 
 import fotografia from '../../assets/servicios/fotografia.png'
 import icon_fotografia1 from '../../assets/servicios/icon-fotografia1.png'
 import icon_fotografia2 from '../../assets/servicios/icon-fotografia2.png'
 import icon_fotografia3 from '../../assets/servicios/icon-fotografia3.png'
 import icon_fotografia4 from '../../assets/servicios/icon-fotografia4.png'
+import fotografia1 from '../../assets/servicios/fotografia1.png'
+import fotografia2 from '../../assets/servicios/fotografia2.png'
+import fotografia3 from '../../assets/servicios/fotografia3.png'
 
 
 ---
 <MainLayout title="HBL - Audiovisual">
   <HeroServicios servicioActivo="audiovisual" />
   <main class="flex flex-col items-center">
-    <div class="w-4/5 mt-30">
+    <div class="w-4/5 mt-20 md:mt-30 mb-5 md:mb-25 ">
       <div>
-        <h1 class="text-3xl font-bold mb-5 tracking-wide" >CONTENIDO <span class="text-titulos">AUDIOVISUAL</span></h1>
-        <p class="text-textos font-normal text-base md:text-lg tracking-wide leading-relaxe">
+        <h1 class="text-2xl md:text-4xl font-bold mb-5 tracking-wide" >CONTENIDO <span class="text-titulos">AUDIOVISUAL</span></h1>
+        <p class="text-textos font-normal text-xs md:text-lg tracking-wide leading-relaxe">
           Producimos contenido visual de alta calidad para fortalecer la presencia de tu marca, 
           comunicar tu propuesta de valor y conectar con tu audiencia a través de fotografía, video y edición profesional.
         </p>
       </div>
 
-
+      <!--CONTENEDOR DE 2 COLUMAS PARA TEXTO  -->
       <div class="relative grid grid-cols-1 md:grid-cols-2 gap-50 items-center mt-10">
+        <!--IMAGEN DE FONDO CON POSITION RELATIVE -->
         <div class="absolute md:col-span-2 inset-0 flex justify-center items-center z-0 pointer-events-none">
           <img 
             src={fotografia.src} 
@@ -32,34 +37,110 @@ import icon_fotografia4 from '../../assets/servicios/icon-fotografia4.png'
           />
         </div>
 
+        <!--COLUMNA IZQUIERDA-->
         <div class="relative z-10 flex flex-col space-y-16 md:space-y-64">
+          <!--INFORMACION COLUMNA IZQUIERDA 2 -->
           <div>
             <img src={icon_fotografia1.src} alt="">
-            <h3 class="text-lg font-normal mt-6 mb-2">Sesiones Fotográficas Profesionales</h3>
-            <p class="text-textos font-light text-sm">Fotografía de producto, gastronómica, corporativa, inmobiliaria y para campañas publicitarias.</p>
+            <h3 class="text-sm md:text-lg font-normal mt-6 mb-2">Sesiones Fotográficas Profesionales</h3>
+            <p class="text-textos font-light text-xs md:text-sm">Fotografía de producto, gastronómica, corporativa, inmobiliaria y para campañas publicitarias.</p>
           </div>
+          <!--INFORMACION COLUMNA IZQUIERDA 2 -->
           <div>
             <img src={icon_fotografia2.src} alt="">
-            <h3 class="text-lg font-normal mt-6 mb-2">Videos Corporativos y Promocionales</h3>
-            <p class="text-textos font-light text-sm">Videos institucionales, testimoniales, de presentación de empresa, productos o servicios.</p>
+            <h3 class="text-sm md:text-lg font-normal mt-6 mb-2">Videos Corporativos y Promocionales</h3>
+            <p class="text-textos font-light text-xs md:text-sm">Videos institucionales, testimoniales, de presentación de empresa, productos o servicios.</p>
           </div>
         </div>
 
+        <!--COLUMNA DERECHA-->
         <div class="relative z-10 space-y-16 md:space-y-64 text-right">
+          <!--INFORMACION COLUMNA DERECHA 1 -->
           <div>
             <img src={icon_fotografia3.src} alt="" class="block ml-auto">
-            <h3 class="text-lg font-normal mt-6 mb-2">Contenido para Redes Sociales</h3>
-            <p class="text-textos font-light text-sm">Producción de reels, videos verticales, contenido para TikTok, Instagram, Facebook y otras plataformas digitales.</p>
+            <h3 class="text-sm md:text-lg font-normal mt-6 mb-2">Contenido para Redes Sociales</h3>
+            <p class="text-textos font-light text-xs md:text-sm">Producción de reels, videos verticales, contenido para TikTok, Instagram, Facebook y otras plataformas digitales.</p>
           </div>
+          <!--INFORMACION COLUMNA DERECHA 2 -->
           <div>
             <img src={icon_fotografia4.src} alt="" class="block ml-auto">
-            <h3 class="text-lg font-normal mt-6 mb-2">Edición y Postproducción de Material Existente</h3>
-            <p class="text-textos font-light text-sm">Edición profesional de fotografías y videos proporcionados por el cliente, incluyendo corrección de color, audio, subtítulos y optimización para diferentes formatos.</p>
+            <h3 class="text-sm md:text-lg font-normal mt-6 mb-2">Edición y Postproducción de Material Existente</h3>
+            <p class="text-textos font-light text-xs md:text-sm">Edición profesional de fotografías y videos proporcionados por el cliente, incluyendo corrección de color, audio, subtítulos y optimización para diferentes formatos.</p>
           </div>
         </div>
       </div>
 
 
+      <!--SECCION DE CARDS -->
+      <div class="mt-15 md:mt-30">
+        <h1 class="text-center font-semibold text-base md:text-3xl tracking-wide">Todos lo proyectos incluyen</h1>
+        
+        <!--CONTENEDOR DE CARDS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+
+        <!--CARDS 1 -->
+          <div class="group relative overflow-hidden rounded-lg border border-principal shadow-md transition-all duration-300 hover:shadow-xl">
+            <div class="h-48 md:h-100 overflow-hidden">
+              <img src={fotografia1.src} alt="Fase de Preproducción" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+            </div>
+            
+            <div class="p-6 md:absolute md:inset-x-0 md:bottom-0 md:bg-gradient-to-t md:from-black md:via-black/95 md:to-black/50 md:translate-y-[calc(100%-3.5rem)] md:transition-transform md:duration-300 md:ease-out md:group-hover:translate-y-0">
+              <h1 class="text-xl font-bold mb-3 md:mb-4 flex items-center justify-between">
+                Preproducción
+                <span class="text-xs font-normal text-textos group-hover:hidden hidden md:inline">Ver más ↑</span>
+              </h1>
+              <ul class="space-y-2 text-sm text-textos md:text-textos md:opacity-0 md:transition-opacity md:duration-200 md:delay-100 md:group-hover:opacity-100">
+                <li class="flex items-center gap-2">▪ Briefing estratégico</li>
+                <li class="flex items-center gap-2">▪ Definición de objetivos</li>
+                <li class="flex items-center gap-2">▪ Planificación de la producción</li>
+                <li class="flex items-center gap-2">▪ Storyboard</li>
+                <li class="flex items-center gap-2">▪ Guión</li>
+              </ul>
+            </div>
+          </div>
+
+        <!--CARDS 2 -->
+          <div class="group relative overflow-hidden rounded-lg border border-principal shadow-md transition-all duration-300 hover:shadow-xl">
+            <div class="h-48 md:h-100 overflow-hidden">
+              <img src={fotografia2.src} alt="Fase de Preproducción" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+            </div>
+            
+            <div class="p-6 md:absolute md:inset-x-0 md:bottom-0 md:bg-gradient-to-t md:from-black md:via-black/95 md:to-black/50 md:translate-y-[calc(100%-3.5rem)] md:transition-transform md:duration-300 md:ease-out md:group-hover:translate-y-0">
+              <h1 class="text-xl font-bold mb-3 md:mb-4 flex items-center justify-between">
+                Producción
+                <span class="text-xs font-normal text-textos md:text-gray-300 group-hover:hidden hidden md:inline">Ver más ↑</span>
+              </h1>
+              <ul class="space-y-2 text-sm text-textos md:text-textos md:opacity-0 md:transition-opacity md:duration-200 md:delay-100 md:group-hover:opacity-100">
+                <li class="flex items-center gap-2">▪ Captura de fotografía y video en locación o estudio</li>
+                <li class="flex items-center gap-2">▪ Dirección de grabación y supervisión técnica para garantizar la mejor calidad visual.</li>
+              </ul>
+            </div>
+          </div>
+
+        <!--CARDS 3 -->
+          <div class="group relative overflow-hidden rounded-lg border border-principal shadow-md transition-all duration-300 hover:shadow-xl">
+            <div class="h-48 md:h-100 overflow-hidden">
+              <img src={fotografia3.src} alt="Fase de Preproducción" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+            </div>
+            
+            <div class="p-6 md:absolute md:inset-x-0 md:bottom-0 md:bg-gradient-to-t md:from-black md:via-black/95 md:to-black/50 md:translate-y-[calc(100%-3.5rem)] md:transition-transform md:duration-300 md:ease-out md:group-hover:translate-y-0">
+              <h1 class="text-xl font-bold mb-3 md:mb-4 flex items-center justify-between">
+                Postproducción
+                <span class="text-xs font-normal text-textos md:text-textos group-hover:hidden hidden md:inline">Ver más ↑</span>
+              </h1>
+              <ul class="space-y-2 text-sm text-textos md:text-textos md:opacity-0 md:transition-opacity md:duration-200 md:delay-100 md:group-hover:opacity-100">
+                <li class="flex items-center gap-2">▪ Edición profesional</li>
+                <li class="flex items-center gap-2">▪ Corrección de color,</li>
+                <li class="flex items-center gap-2">▪ Diseño sonoro</li>
+                <li class="flex items-center gap-2">▪ Integración de gráficos y entrega optimizada para los canales y formatos requeridos.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </div>
   </main>
+  <Contacto/>
 </MainLayout>

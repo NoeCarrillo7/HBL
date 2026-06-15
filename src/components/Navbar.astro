@@ -6,7 +6,7 @@ import logo from '../assets/nav/logomorado.png';
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class="sticky top-0 z-50 flex items-center justify-center md:justify-between px-4 md:px-8 lg:px-20 py-6 bg-[#050505] border-b border-white/10">
+<nav class="sticky top-0 z-50 flex items-center justify-center md:justify-between px-4 md:px-8 lg:px-20 py-6 bg-[#050505] border-b border-white-600">
 
   <div class="flex-1 flex justify-center md:justify-start">
   <button
@@ -31,27 +31,25 @@ const currentPath = Astro.url.pathname;
 
   <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-12">
 
-  <a href="/" 
-    class={`nav-link tracking-wide ${currentPath === '/' ? 'font-medium text-white' : 'font-light text-white/60'}`}>
-    INICIO
-  </a>
-  <a href="/servicios/branding"
-    class={`nav-link tracking-wide ${
-    currentPath.startsWith('/servicios') ? 'font-medium text-white' : 'font-light text-white/60'}`}>
-    SERVICIOS
-  </a>
+    <a href="/" 
+      class={`nav-link tracking-wide ${currentPath === '/' ? 'font-medium text-white' : 'font-light text-white/60'}`}>
+      INICIO
+    </a>
+    <a href="/servicios/branding"
+      class={`nav-link tracking-wide ${currentPath.startsWith('/servicios') ? 'font-medium text-purple-500' : 'font-light text-white/60'}`}>
+      SERVICIOS
+    </a>
 
-  <a href="/#acercade"
-    class={`nav-link tracking-wide ${
-    currentPath === '/#acercade' ? 'font-medium text-white' : 'font-light text-white/60'}`}>
-    ACERCA DE
-  </a>
+    <a href="/#acercade"
+      class={`nav-link tracking-wide ${currentPath === '/#acercade' ? 'font-medium text-white' : 'font-light text-white/60'}`}>
+      ACERCA DE
+    </a>
   </div>
 
   <div class="hidden md:block">
     <a
       href="/#contacto"
-      class="bg-violet-700 hover:bg-violet-600 text-white no-underline px-7 py-3 font-light transition-all duration-300 rounded-tl-[15px] rounded-br-[15px]"
+      class="bg-principal hover:bg-violet-600 text-white no-underline px-7 py-3 font-light transition-all duration-300 rounded-tl-[15px] rounded-br-[15px]"
     >
       CONTACTO
     </a>

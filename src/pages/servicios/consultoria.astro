@@ -1,12 +1,48 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import HeroServicios from '../../components/HeroServicios.astro';
+import Contacto from '../../components/Contacto.astro';
+
+
+import Consulatoria from '../../assets/servicios/Consultoria.png';
 ---
 
 <MainLayout title="HBL - Consultoría">
   <HeroServicios servicioActivo="consultoria" />
-  <main style="padding: 3rem; text-align: center;">
-    <h1>CONSULTORÍA</h1>
-    <p>Servicios de consultoría especializada en estrategia y desarrollo...</p>
+  <main class="flex flex-col items-center">
+    <div class="w-4/5 mb-10 mt-20 md:mt-30  grid grid-cols-1 md:grid-cols-2">
+      <div class="flex flex-col space-y-8">
+        <div class="">
+          <h1 class="text-2xl md:text-4xl font-bold mb-5 tracking-wider">
+            ASESORIA 1:1 <br><span class="text-titulos md:text-3xl">ESTRATEGIAS PERSONALIZADAS</span>
+          </h1>
+          <p class="text-textos font-normal text-xs md:text-lg tracking-wide leading-relaxed">
+            Analizamos tu negocio y diseñamos una estrategia personalizada para impulsar su crecimiento y alcanzar tus objetivos.
+          </p>
+        </div>
+
+        <div class="h-50 border border"></div>
+      </div>
+
+      <div class="grid grid-cols-1 grid-rows-1 items-center justify-center relative w-full mt-10 md:mt-0">
+        <div class="col-start-1 row-start-1 max-w-md md:max-w-full justify-self-center">
+          <img 
+            src={Consulatoria.src}
+            alt="Sesión de asesoría" 
+            class="w-full h-auto object-contain"
+          />
+        </div>
+
+        <a 
+          href="#agenda" 
+          class="col-start-1 row-start-1 z-10 w-32 h-32 md:w-50 md:h-50 rounded-full border border-white bg-black/80 hover:bg-principal hover:border-white transition-all duration-300 flex items-center justify-center text-center p-4 group shadow-xl self-end justify-self-start mb-40 ml-40 md:mb-10 md:-ml-20"
+        >
+          <span class="text-sm md:text-base font-semibold tracking-wide text-white group-hover:scale-105 transition-transform duration-200">
+            Agenda una reunión
+          </span>
+        </a>
+      </div>
+    </div>
   </main>
+  <Contacto/>
 </MainLayout>
