@@ -1,11 +1,481 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
-import HeroServicios from '../../components/HeroServicios.astro';
+import MainLayout from "../../layouts/MainLayout.astro";
+import HeroServicios from "../../components/HeroServicios.astro";
+import Contacto from "../../components/Contacto.astro";
+import laptop from "../../assets/servicios/web.png";
+// Es para el icono de innovación y tecnología
+import { Lightbulb } from "lucide-astro";
+import icon_check from "../../assets/servicios/icon-check.png";
 ---
+
 <MainLayout title="HBL - WEB">
   <HeroServicios servicioActivo="web" />
-  <main style="padding: 3rem; text-align: center;">
-    <h1>AUDIOVISUAL</h1>
-    <p>Contenido y paquetes específicos de Audiovisual...</p>
-  </main>
-</MainLayout>
+  <main class="flex flex-col items-center">
+    <!--CONTENEDOR PRINCIPAL -->
+    <div class="w-4/5 mt-30">
+      <!--TITULO Y TEXTO -->
+      <h1 class="text-2xl md:text-4xl font-bold mb-5 tracking-wide text-center">
+        DISEÑO WEB <br /><span class="text-titulos"
+          >CREACIÓN DE PÁGINAS WEB
+        </span>
+      </h1>
+      <p
+        class="text-textos font-normal text-base md:text-lg tracking-wide leading-relaxed text-justify md:text-center"
+      >
+        Creamos experiencias digitales que combinan diseño estratégico, alto
+        rendimiento y automatización inteligente para optimizar procesos,
+        mejorar la experiencia de usuario, y generar resultados reales para tu
+        negocio.
+      </p>
+
+      <!--IMAGEN Y RECUADROS-->
+      <div class="pt-16 md:pt-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Imagen -->
+          <div class="flex justify-center">
+            <img
+              src={laptop.src}
+              alt="Desarrollo Web"
+              class="w-full max-w-xl object-contain"
+            />
+          </div>
+
+          <!-- Timeline -->
+          <div class="relative">
+            <!-- Línea vertical -->
+            <div class="absolute left-0 top-0 h-full w-[2px] bg-principal">
+            </div>
+
+            <!-- RECUADRO 1 -->
+            <div class="relative pl-10 mb-12">
+              <!-- Es para el circulito -->
+              <div
+                class="absolute left-[-6px] top-8 w-4 h-4 rounded-full bg-principal"
+              >
+              </div>
+              <!-- Aqui empieza el recuadro -->
+              <div class="bg-[#0B0814] border border-principal rounded-3xl p-8">
+                <h3
+                  class="flex items-center gap-4 text-xl font-bold text-white uppercase mb-8"
+                >
+                  <span
+                    class="flex items-center justify-center w-14 h-14 border border-principal rounded-xl text-principal"
+                  >
+                    &lt;/&gt;
+                  </span> MATERIAL DIGITAL
+                </h3>
+
+                <ul class="space-y-3 text-textos text-sm">
+                  <li class="flex gap-4">
+                    <img
+                      src={icon_check.src}
+                      alt="icon check"
+                      class="w-5 h-5 shrink-0 object-contain"
+                    />
+                    Diseño y desarrollo de sitio web, blog, tienda en línea o landing
+                    pages.
+                  </li>
+
+                  <li class="flex gap-4">
+                    <img
+                      src={icon_check.src}
+                      alt="icon check"
+                      class="w-5 h-5 shrink-0 object-contain"
+                    />
+                    Optimización de velocidad web.
+                  </li>
+
+                  <li class="flex gap-4">
+                    <img
+                      src={icon_check.src}
+                      alt="icon check"
+                      class="w-5 h-5 shrink-0 object-contain"
+                    />
+                    Adaptabilidad mobile-first.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- RECUADRO 2 -->
+            <div class="relative pl-10">
+              <!-- Es para el circulito -->
+              <div
+                class="absolute left-[-6px] top-8 w-4 h-4 rounded-full bg-principal"
+              >
+              </div>
+              <div class="bg-[#0B0814] border border-principal rounded-3xl p-8">
+                <h3
+                  class="flex items-center gap-4 text-xl font-bold text-white uppercase mb-8"
+                >
+                  <span
+                    class="flex items-center justify-center w-14 h-14 border border-principal rounded-xl"
+                  >
+                    <Lightbulb class="w-7 h-7 text-principal" />
+                  </span> INNOVACIÓN Y TECNOLÓGIA
+                </h3>
+
+                <ul class="space-y-3 text-textos text-sm">
+                  <li class="flex gap-4">
+                    <img
+                      src={icon_check.src}
+                      alt="icon check"
+                      class="w-5 h-5 shrink-0 object-contain"
+                    />
+                    Analítica web avanzada
+                  </li>
+
+                  <li class="flex gap-4">
+                    <img
+                      src={icon_check.src}
+                      alt="icon check"
+                      class="w-5 h-5 shrink-0 object-contain"
+                    />
+                    Chatbots y automatización
+                  </li>
+
+                  <li class="flex gap-4">
+                    <img
+                      src={icon_check.src}
+                      alt="icon check"
+                      class="w-5 h-5 shrink-0 object-contain"
+                    />
+                    Aplicaciones móviles
+                  </li>
+                  <li class="flex gap-4">
+                    <img
+                      src={icon_check.src}
+                      alt="icon check"
+                      class="w-5 h-5 shrink-0 object-contain"
+                    />
+                    Integración CRM
+                  </li>
+                  <li class="flex gap-4">
+                    <img
+                      src={icon_check.src}
+                      alt="icon check"
+                      class="w-5 h-5 shrink-0 object-contain"
+                    />
+                    Tecnología e innovación digital
+                  </li>
+                  <li class="flex gap-4">
+                    <img
+                      src={icon_check.src}
+                      alt="icon check"
+                      class="w-5 h-5 shrink-0 object-contain"
+                    />
+                    Pedidos online
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <!--CONTENEDOR DE PAQUETES -->
+      <div class="pt-16 md:pt-20">
+        <h1
+          class="text-2xl md:text-4xl font-semibold text-center tracking-wide mb-10 md:mb-5"
+        >
+          PAQUETES DE <span class="text-titulos">DESARROLLO WEB</span>
+        </h1>
+        <p
+          class="text-textos mb-10 font-normal text-base md:text-lg tracking-wide leading-relaxed text-justify md:text-center"
+        >
+          Descubre el paquete que mejor se adapta a tu negocio y lleva tu marca
+          al siguiente nivel.
+        </p>
+
+        <!--CONTENEDOR DE CARDS PAQUETES -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start"
+        >
+          <!--CARD PAQUETE 1 -->
+          <div
+            class="border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full"
+          >
+            <div class="text-center">
+              <h3 class="text-3xl font-semibold text-titulos tracking-wide">
+                Visión
+              </h3>
+            </div>
+
+            <div
+              class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-sm"
+            >
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>Sitio Web Estático de hasta 2 secciones </span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>Dominio y hosting por 1 año</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>Configuración de 1 correo corporativo.</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>Optimización básica para móviles.</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>Formulario de contacto.</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>1 Sesión de ajustes de diseño.</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-5 mt-auto">
+              <div class="font-bold text-2xl tracking-wide">
+                $7800 MXN + IVA<span class="text-xl font-medium ml-1">MXN</span>
+              </div>
+              <p class="font-normal text-xs tracking-wide text-textos">
+                Lapso de 1-2 semanas
+              </p>
+              <button
+                class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer"
+              >
+                ADQUIRIR
+              </button>
+            </div>
+          </div>
+
+          <!--CARD PAQUETE 2 -->
+          <div
+            class="border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full"
+          >
+            <div class="text-center">
+              <span class="text-xl font-light tracking-wide block">Visión</span>
+              <h3 class="text-3xl font-semibold text-titulos tracking-wide">
+                Plus
+              </h3>
+            </div>
+
+            <div
+              class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-sm"
+            >
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>Sitio web Dinámico de hasta 3 secciones</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>Dominio y hosting por 2 años</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>Configuración de 5 correos corporativos.</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>Diseño responsivo</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>Formulario de contacto</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>2 Sesiones de ajustes de diseño</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-5 mt-auto">
+              <div class="font-bold text-2xl tracking-wide">
+                $9800 MXN + IVA<span class="text-xl font-medium ml-1">MXN</span>
+              </div>
+              <p class="font-normal text-xs tracking-wide text-textos">
+                Lapso de 2-3 semanas
+              </p>
+              <button
+                class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer"
+              >
+                ADQUIRIR
+              </button>
+            </div>
+          </div>
+
+          <!--CARD PAQUETE 3 -->
+          <div
+            class="border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full md:col-span-2 lg:col-span-1"
+          >
+            <div class="text-center">
+              <h3 class="text-3xl font-semibold text-titulos tracking-wide">
+                Extreme
+              </h3>
+            </div>
+
+            <div
+              class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-sm"
+            >
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>Sitio web Dinámico extendido</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>Dominio y hosting por 3 años</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>Configuración de 10 correos corporativos</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>Diseño responsivo premium</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-5 h-5 shrink-0 object-contain"
+                />
+                <span>2 Sesiones de ajustes de diseño</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-5 mt-auto">
+              <div class="font-bold text-2xl tracking-wide">
+                $14300 MXN + IVA<span class="text-xl font-medium ml-1"
+                  >MXN</span>
+              </div>
+              <p class="font-normal text-xs tracking-wide text-textos">
+                Lapso de 3 a 4 semanas
+              </p>
+              <button
+                class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer"
+              >
+                ADQUIRIR
+              </button>
+            </div>
+          </div>
+          <!--CARD PAQUETE 4 -->
+          <div class="border border-principal rounded-2xl lg:col-span-3 p-10">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+              <!-- LADO IZQUIERDO -->
+              <div class="flex flex-col justify-center">
+                <h3 class="text-4xl font-semibold text-titulos tracking-wide">
+                  Personalizado
+                </h3>
+
+                <p class="text-textos mt-4">
+                  Solución completa para empresas que buscan una presencia
+                  digital avanzada.
+                </p>
+
+                <div class="mt-8">
+                  <div class="font-bold text-3xl tracking-wide">
+                    $ Cotización personalizada
+                  </div>
+                  <p class="text-textos mt-2">Tiempo de entrega (Según requerimientos)</p>
+                </div>
+
+                <button
+                  class="mt-5 py-3 px-8 bg-principal font-semibold rounded-2xl hover:bg-principal/80 transition-colors"
+                >
+                  ADQUIRIR
+                </button>
+              </div>
+
+              <!-- LADO DERECHO -->
+              <div
+                class="flex flex-col gap-5 font-extralight tracking-wide text-sm"
+              >
+                <div class="flex items-center gap-4">
+                  <img src={icon_check.src} alt="" class="w-5 h-5 shrink-0" />
+                  <span>Infraestructura escalable (Cloud) </span>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <img src={icon_check.src} alt="" class="w-5 h-5 shrink-0" />
+                  <span>Tiendas en línea(E-Commerce)</span>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <img src={icon_check.src} alt="" class="w-5 h-5 shrink-0" />
+                  <span>Chat Bots e integraciones con IA</span>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <img src={icon_check.src} alt="" class="w-5 h-5 shrink-0" />
+                  <span>Integraciones con puntos de venta.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Contacto />
+      </div>
+    </div>
+  </main></MainLayout
+>
