@@ -5,9 +5,23 @@ import Contacto from '../../components/Contacto.astro';
 
 
 import Consulatoria from '../../assets/servicios/Consultoria.png';
+
+
+const servicios = [
+  "AUDITORÍA DE PRESENCIA DIGITAL",
+  "ANÁLISIS DE COMPETENCIA",
+  "ESTRATEGIA DE MARCA",
+  "DISEÑO DE EXPERIENCIA DEL CLIENTE (CUSTOMER JOURNEY)",
+  "SOCIAL MEDIA Y CONTENIDO",
+  "AUDITORÍA DE MARCA Y PUNTOS DE CONTACTO",
+  "PLANIFICACIÓN DE CAMPAÑAS O LANZAMIENTOS",
+  "RECOMENDACIONES SENSORIALES",
+  "CONSULTORÍA PARA EMPRENDEDORES Y CREATIVOS",
+  "ACOMPAÑAMIENTO ESTRATÉGICO MENSUAL"
+];  
 ---
 
-<MainLayout title="HBL - Consultoría">
+<MainLayout title="HBL - ASESORIA">
   <HeroServicios servicioActivo="consultoria" />
   <main class="flex flex-col items-center">
     <div class="w-4/5 mb-10 mt-20 md:mt-30  grid grid-cols-1 md:grid-cols-2">
@@ -21,7 +35,25 @@ import Consulatoria from '../../assets/servicios/Consultoria.png';
           </p>
         </div>
 
-        <div class="h-50 border border"></div>
+        <div class="md:mt-20 flex justify-center">
+          <div class="carrusel-contenedor md:w-4/5">
+            <div class="carrusel-track">
+              {/* Bloque Original */}
+              <div class="carrusel-grupo">
+                {servicios.map((servicio) => (
+                  <div class="card">{servicio}</div>
+                ))}
+              </div>
+              
+              {/* Duplicado idéntico para el efecto infinito */}
+              <div class="carrusel-grupo" aria-hidden="true">
+                {servicios.map((servicio) => (
+                  <div class="card">{servicio}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="grid grid-cols-1 grid-rows-1 items-center justify-center relative w-full mt-10 md:mt-0">
@@ -46,3 +78,63 @@ import Consulatoria from '../../assets/servicios/Consultoria.png';
   </main>
   <Contacto/>
 </MainLayout>
+
+
+
+
+<style>
+  /* Contenedor principal: define la altura visible y oculta el desborde */
+  .carrusel-contenedor {
+    height: 100px; /* Ajusta esta altura según cuántas cards quieras ver a la vez */
+    overflow: hidden;
+    position: relative;
+    background: #0a0a0a;
+    border-radius: 8px;
+    padding: 1rem 0;
+  }
+
+  /* Contenedor móvil que aloja ambos grupos */
+  .carrusel-track {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: scrollArriba 25s linear infinite;
+  }
+
+  /* Pausar el movimiento cuando el usuario pasa el mouse por encima */
+  .carrusel-contenedor:hover .carrusel-track {
+    animation-play-state: paused;
+  }
+
+  /* Grupo de elementos */
+  .carrusel-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Estilo básico de la Card */
+  .card {
+    background: #141414;
+    color: #ffffff;
+    padding: 1.5rem;
+    margin: 0 1rem;
+    border-radius: 6px;
+    border: 1px solid #222;
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Animación CSS: traslada exactamente el 50% de la altura total del track */
+  @keyframes scrollArriba {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(calc(-50% - 0.5rem)); /* Resta la mitad del gap para evitar saltos */
+    }
+  }
+</style>

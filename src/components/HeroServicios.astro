@@ -5,27 +5,30 @@ interface Props {
 const { servicioActivo } = Astro.props;
 ---
 
-<section class="flex flex-col items-center mt-15 px-4">
-  <p class="text-titulos font-light tracking-wide text-2xl mb-2.5">NUESTROS SERVICIOS</p>
+<section class="flex flex-col items-center">
+  <div class="w-4/5 flex flex-col items-center mt-15 ">
+    <p class="text-titulos font-light tracking-wide text-sm md:text-2xl mb-2.5">NUESTROS SERVICIOS</p>
   
-  <h2 class="text-center text-5xl font-bold mb-5 tracking-wide">
-    SOLUCIONES DISEÑADAS<br> A TU <span class="text-titulos">MEDIDA</span>
-  </h2>
-  
-  <span class="text-textos font-normal text-lg text-center tracking-wide ">
-    Ofrecemos una gama de servicios para satisfacer las necesidades de <br class="hidden md:inline"> tu marca y hacerla destacar.
-  </span>
+    <h2 class="text-center text-3xl md:text-5xl font-bold mb-5 tracking-wide">
+      SOLUCIONES DISEÑADAS<br> A TU <span class="text-titulos">MEDIDA</span>
+    </h2>
+    
+    <span class="text-textos font-normal text-sm md:text-lg text-center tracking-wide ">
+      Ofrecemos una gama de servicios para satisfacer las necesidades de <br class="hidden md:inline"> tu marca y hacerla destacar.
+    </span>
 
-  <a class="px-5 py-2.5 bg-principal hover:bg-[#5f18bd] text-white text-sm rounded-full mt-10 mb-20 font-light tracking-wide transition-colors" href="#">
-    DESCARGAR CATÁLOGO
-  </a>
-  
-  <div class="w-full max-w-6xl grid grid-cols-2 sm:grid-cols-3 md:flex md:justify-between gap-3 md:gap-2">
-    <a href="/servicios/branding" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'branding' ? 'active' : ''}`}>BRANDING</a>
-    <a href="/servicios/social-media" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'social-media' ? 'active' : ''}`}>SOCIAL MEDIA</a>
-    <a href="/servicios/audiovisual" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'audiovisual' ? 'active' : ''}`}>FOTOGRAFIA</a>
-    <a href="/servicios/marketing" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'marketing' ? 'active' : ''}`}>MARKETING</a>
-    <a href="/servicios/web" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'web' ? 'active' : ''}`}>WEB</a>
-    <a href="/servicios/consultoria" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'consultoria' ? 'active' : ''}`}>CONSULTORÍA</a>
+    <a class="px-5 py-2.5 bg-principal hover:bg-[#5f18bd] text-white text-sm rounded-full mt-10 mb-20 font-light tracking-wide transition-colors" href="#">
+      DESCARGAR CATÁLOGO
+    </a>
+    
+    <div class="w-full max-w-6xl grid grid-cols-2 sm:grid-cols-3 md:flex md:justify-between gap-3 md:gap-2">
+      <a href="/servicios/branding" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'branding' ? 'active' : ''}`}>BRANDING</a>
+      <a href="/servicios/web" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'web' ? 'active' : ''}`}>WEB</a>
+      <a href="/servicios/social-media" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'social-media' ? 'active' : ''}`}>SOCIAL MEDIA</a>
+      <a href="/servicios/audiovisual" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'audiovisual' ? 'active' : ''}`}>FOTOGRAFIA</a>
+      <a href="/servicios/marketing" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'marketing' ? 'active' : ''}`}>MARKETING</a>
+      <a href="/servicios/consultoria" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'consultoria' ? 'active' : ''}`}>ASESORIA</a>
+    </div>
   </div>
+  
 </section>
