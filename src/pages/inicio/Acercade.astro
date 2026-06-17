@@ -8,24 +8,23 @@ import imagen2 from "../../assets/acercade/seccion2.png";
 <section id="acercade"  class="pb-24 flex flex-col items-center mt-10">
   <div class="w-4/5 ">
     <!-- SECCIÓN 1 -->
-    <div class="grid lg:grid-cols-2 gap-20 items-center">
-      <div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center mt-10">
+      <div class="order-2 md:order-1">
         <!-- IMAGEN 1 -->
         <img
           src={imagen1.src}
           alt="Acerca de HBL"
-          class="w-full h-[400px] object-cover rounded-xl brightness-75 hover:brightness-100 transition duration-500"
+          class="w-full md:h-[400px] object-cover rounded-xl brightness-75 hover:brightness-100 transition duration-500"
         />
       </div>
 
-      <div class="">
-        <h2 class="text-4xl font-bold leading-tight">
-          <span class="block text-white"> TU HISTORIA </span>
-
-          <span class="block text-titulos"> NUESTRA INSPIRACIÓN </span>
+      <div class="order-1 md:order-2">
+        <h2 class="text-2xl md:text-4xl font-bold tracking-wider">
+          TU HISTORIA
+          <span class="text-titulos"> NUESTRA INSPIRACIÓN </span>
         </h2>
         <!-- texto 1 -->
-        <div class="text-textos text-xs md:text-lg mt-8 tracking-wide space-y-2 leading-8  text-justify">
+        <div class="text-textos text-xs md:text-base mt-8 tracking-wide space-y-2 md:leading-7 text-justify">
           <p>
             Sabemos que cada marca es única y tiene necesidades específicas. Por
             eso, en HORECA BRANDING LAB ofrecemos total flexibilidad para
@@ -51,16 +50,16 @@ import imagen2 from "../../assets/acercade/seccion2.png";
     </div>
 
     <!-- SECCIÓN 2 -->
-    <div class="grid lg:grid-cols-2 gap-20 items-center mt-32">
+    <div class="grid lg:grid-cols-2 gap-10 md:gap-20 items-center mt-32">
       <div class="max-w-xl">
         <!-- titulo 2 -->
-        <h2 class="text-2xl md:text-4xl font-bold">
-          <span>QUIÉNES</span>
+        <h2 class="text-2xl md:text-4xl font-bold tracking-wider">
+          QUIÉNES
           <span class="text-titulos">SOMOS</span>
         </h2>
         <!-- TEXTO 2 -->
         <div
-          class="text-textos text-xs md:text-lg mt-8 tracking-wide space-y-2 leading-8 max-w-2xl text-justify"
+          class="text-textos text-xs md:text-base mt-8 tracking-wide space-y-2 md:leading-7 text-justify"
         >
           <p>
             En HORECA BRANDING LAB somos un equipo multidisciplinario
@@ -81,7 +80,7 @@ import imagen2 from "../../assets/acercade/seccion2.png";
         <img
           src={imagen2.src}
           alt="Quiénes somos"
-          class="w-full h-[400px] object-cover rounded-3xl brightness-75 hover:brightness-100 transition duration-500"
+          class="w-full md:h-[400px] object-cover rounded-3xl brightness-75 hover:brightness-100 transition duration-500"
         />
       </div>
     </div>

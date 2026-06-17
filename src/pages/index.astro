@@ -6,50 +6,103 @@ import Contacto from "../components/Contacto.astro";
 import Acercade from "../pages/inicio/Acercade.astro";
 import Cardservicios from "../pages/inicio/Cardservicios.astro";
 import fondo from "../assets/hero/s1-elemento1.jpg";
+import web_inicio from "../assets/web-inicio.png";
+import branding_inicio from "../assets/branding-inicio.png";
 ---
 
 <MainLayout title="HBL - Inicio">
   <main
-    class="relative min-h-[45vh] md:min-h-[90vh] flex flex-col justify-start md:justify-center items-center text-center px-4 bg-cover bg-center bg-no-repeat"
+    class="relative min-h-[45vh] md:min-h-[90vh] flex flex-col justify-start md:justify-center items-center text-center px-4"
   >
+
+    
     <img
       src={fondo.src}
       alt="Fondo hero"
       class="absolute inset-0 w-full h-full object-cover object-top md:object-center"
     />
 
-    <div class="relative z-10 pt-24 md:pt-0">
-      <h2
-        class="text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-5 leading-none tracking-wide"
-      >
-        TRANSFORMAMOS LA <br /> HISTORIA DE <span class="text-titulos"
-          >TU MARCA
-        </span>
-      </h2>
+    <div class="w-4/5 ">
+      <div class="relative z-10 pt-24 md:pt-0">
+        <h2 class="text-center text-3xl md:text-7xl font-extrabold mb-5 tracking-wide">
+          Trasforma la <br /> <span class="text-titulos">historia de tu <br/>marca</span>
+        </h2>
 
-      <p class="text-textos text-base sm:text-lg max-w-xl mx-auto">
-        Servicios personalizados y estrategicos.
-      </p>
+        <p class="text-white/80 text-sm md:text-xl max-w-xl mx-auto">
+          Servicios personalizados y estrategicos.
+        </p>
 
-      <div class="mt-8">
-        <a
-          class="px-6 py-3 bg-[#4F119F] hover:bg-[#5f18bd] text-white rounded-full my-10 font-medium tracking-wide transition-colors"
-          href="/servicios/branding"
-        >
-          VER SERVICIOS
-        </a>
+        <div class="mt-8">
+          <a
+            class="py-2 px-4 md:px-6 md:py-3 bg-[#4F119F] hover:bg-[#5f18bd] text-white rounded-full my-10 font-medium tracking-wide transition-colors"
+            href="/servicios/branding"
+          >
+            VER SERVICIOS
+          </a>
+        </div>
       </div>
     </div>
+
+    
 
     
 
 
   </main>
 
-  <div class="w-full flex flex-col items-center">
+  <div class="w-full flex flex-col items-center mt-20 md:mt-0">
+    <h1 class="text-2xl md:text-4xl font-bold tracking-wide">ESTRATEGIA Y <span class="text-titulos">CÓDIGO</span></h1>
+    <p class="text-textos text-sm md:text-lg font-normal tracking-wide mb-10">Construimos el futuro de tu negocio.</p>
+    <div class="w-4/5 grid grid-cols-1 md:grid-cols-2 gap-10 h-[550px] md:h-[450px]">
+      <div class="group relative overflow-hidden rounded-xl">
+        <img 
+          src={branding_inicio.src} 
+          alt="Branding" 
+          class="absolute inset-0 h-full w-full object-cover z-10 transition-transform duration-500 group-hover:scale-105"
+        />
+          
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-20"></div>
+        
+        <div class="absolute inset-0 z-30 flex flex-col justify-end p-8">
+          <span class="text-xs text-titulos tracking-wider font-semibold mb-2">Especialidad</span>
+          <h3 class="text-1xl md:text-3xl font-bold tracking-wider mb-4">BRANDING</h3>
+            
+          <ul class="space-y-2 mb-6 text-textos text-sm">
+            <li class="flex items-center gap-2">Estrategia</li>
+            <li class="flex items-center gap-2">Diseño Visual</li>
+            <li class="flex items-center gap-2">Redes Sociales</li>
+          </ul>
+          
+          <a href="servicios/branding" class="inline-flex items-center justify-center w-max px-5 py-2 rounded-full border border-white/20 text-sm font-medium hover:bg-principal/30 transition-colors">
+            Ver más →
+          </a>
+        </div>
+      </div>
 
-    <div class="w-4/5 border border-red-400 h-100">
-      <!--DENTRO DE ESTE DIV -->
+      <div class="group relative overflow-hidden rounded-xl">
+        <img 
+          src={web_inicio.src} 
+          alt="Branding" 
+          class="absolute inset-0 h-full w-full object-cover z-10 transition-transform duration-500 group-hover:scale-105"
+        />
+          
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-20"></div>
+        
+        <div class="absolute inset-0 z-30 flex flex-col justify-end p-8">
+          <span class="text-xs text-titulos tracking-wider font-semibold mb-2">Especialidad</span>
+          <h3 class="text-1xl md:text-3xl font-bold tracking-wider mb-4">DESARROLLO WEB</h3>
+            
+          <ul class="space-y-2 mb-6 text-textos text-sm">
+            <li class="flex items-center gap-2">Sitios Web</li>
+            <li class="flex items-center gap-2">Experincia UI/UX</li>
+            <li class="flex items-center gap-2">Optimización</li>
+          </ul>
+          
+          <a href="servicios/web" class="inline-flex items-center justify-center w-max px-5 py-2 rounded-full border border-white/20 text-sm font-medium hover:bg-principal/30 transition-colors">
+            Ver más →
+          </a>
+        </div>
+      </div>
     </div>
 
   </div>
