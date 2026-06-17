@@ -1,234 +1,524 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
-import Contacto from '../../components/Contacto.astro';
+import MainLayout from "../../layouts/MainLayout.astro";
+import Contacto from "../../components/Contacto.astro";
 
-import HeroServicios from '../../components/HeroServicios.astro';
-import icon_benficios1 from '../../assets/servicios/icon-beneficios1.png'
-import icon_benficios2 from '../../assets/servicios/icon-beneficios2.png'
-import icon_benficios3 from '../../assets/servicios/icon-beneficios3.png'
-import icon_benficios4 from '../../assets/servicios/icon-beneficios4.png'
-import icon_benficios5 from '../../assets/servicios/icon-beneficios5.png'
-import beneficios from '../../assets/servicios/beneficios.png'
-import icon_check from '../../assets/servicios/icon-check.png';
-
-
+import HeroServicios from "../../components/HeroServicios.astro";
+import icon_benficios1 from "../../assets/servicios/icon-beneficios1.png";
+import icon_benficios2 from "../../assets/servicios/icon-beneficios2.png";
+import icon_benficios3 from "../../assets/servicios/icon-beneficios3.png";
+import icon_benficios4 from "../../assets/servicios/icon-beneficios4.png";
+import icon_benficios5 from "../../assets/servicios/icon-beneficios5.png";
+import beneficios from "../../assets/servicios/beneficios.png";
+import icon_check from "../../assets/servicios/icon-check.png";
 ---
+
 <MainLayout title="HBL - Social Media">
   <HeroServicios servicioActivo="social-media" />
   <main class="flex flex-col items-center">
     <div class="w-4/5 mb-10 md:mb-30 mt-20 md:mt-30">
-
       <div>
-        <h1 class="text-2xl md:text-3xl font-bold mb-5 tracking-wide" >SOCIAL MEDIA - CREACIÓN DE CONTENIDO + GESTIÓN ESTRATÉGICA</h1>
-        <p class="text-textos font-normal text-xs md:text-lg tracking-wide leading-relaxe">Transformamos tus redes sociales en una herramienta de crecimiento para tu negocio. 
-          Desarrollamos estrategias, contenido visual y planes de publicación que aumentan la 
-          visibilidad de tu marca, fortalecen la relación con tus clientes y generan oportunidades reales de venta.
+        <h1 class="sm-titulo text-2xl md:text-3xl font-bold mb-5 tracking-wide">
+          SOCIAL MEDIA - CREACIÓN DE CONTENIDO + GESTIÓN ESTRATÉGICA
+        </h1>
+        <p
+          class="sm-texto text-textos font-normal text-xs md:text-lg tracking-wide leading-relaxe"
+        >
+          Transformamos tus redes sociales en una herramienta de crecimiento
+          para tu negocio. Desarrollamos estrategias, contenido visual y planes
+          de publicación que aumentan la visibilidad de tu marca, fortalecen la
+          relación con tus clientes y generan oportunidades reales de venta.
         </p>
       </div>
-      
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-15 gap-10">
         <div class="flex flex-col gap-7">
-          <h1 class="text-base md:text-2xl font-normal  tracking-wide">Beneficios de nuestros planes:</h1>
+          <h1
+            class="sm-beneficios text-base md:text-2xl font-normal tracking-wide"
+          >
+            Beneficios de nuestros planes:
+          </h1>
           <div class="flex gap-5 md:ml-10">
-            <img src={icon_benficios1.src} alt="" class="w-5 h-5 shrink-0 object-contain">
-            <p class="text-textos font-normal text-xs md:text-base tracking-wider">Estrategia de contenido alineada con tus objetivos.</p>
+            <img
+              src={icon_benficios1.src}
+              alt=""
+              class="w-5 h-5 shrink-0 object-contain"
+            />
+            <p
+              class="text-textos font-normal text-xs md:text-base tracking-wider"
+            >
+              Estrategia de contenido alineada con tus objetivos.
+            </p>
           </div>
           <div class="flex gap-5 md:ml-10">
-            <img src={icon_benficios2.src} alt="" class="w-5 h-5 shrink-0 object-contain">
-            <p class="text-textos font-normal text-xs md:text-base tracking-wider">Creación de contenido atractivo y relevante.</p>
+            <img
+              src={icon_benficios2.src}
+              alt=""
+              class="w-5 h-5 shrink-0 object-contain"
+            />
+            <p
+              class="text-textos font-normal text-xs md:text-base tracking-wider"
+            >
+              Creación de contenido atractivo y relevante.
+            </p>
           </div>
           <div class="flex gap-5 md:ml-10">
-            <img src={icon_benficios3.src} alt="" class="w-5 h-5 shrink-0 object-contain">
-            <p class="text-textos font-normal text-xs md:text-base tracking-wider">Planificación mensual para mantener consistencia.</p>
+            <img
+              src={icon_benficios3.src}
+              alt=""
+              class="w-5 h-5 shrink-0 object-contain"
+            />
+            <p
+              class="text-textos font-normal text-xs md:text-base tracking-wider"
+            >
+              Planificación mensual para mantener consistencia.
+            </p>
           </div>
           <div class="flex gap-5 md:ml-10">
-            <img src={icon_benficios4.src} alt="" class="w-5 h-5 shrink-0 object-contain">
-            <p class="text-textos font-normal text-xs md:text-base tracking-wider">Gestión activa de tu comunidad digital.</p>
+            <img
+              src={icon_benficios4.src}
+              alt=""
+              class="w-5 h-5 shrink-0 object-contain"
+            />
+            <p
+              class="text-textos font-normal text-xs md:text-base tracking-wider"
+            >
+              Gestión activa de tu comunidad digital.
+            </p>
           </div>
           <div class="flex gap-5 md:ml-10">
-            <img src={icon_benficios5.src} alt="" class="w-5 h-5 shrink-0 object-contain">
-            <p class="text-textos font-normal text-xs md:text-base tracking-wider">Planes flexibles adaptados a las necesidades de tu negocio.</p>
+            <img
+              src={icon_benficios5.src}
+              alt=""
+              class="w-5 h-5 shrink-0 object-contain"
+            />
+            <p
+              class="text-textos font-normal text-xs md:text-base tracking-wider"
+            >
+              Planes flexibles adaptados a las necesidades de tu negocio.
+            </p>
           </div>
         </div>
         <div>
-          <img src={beneficios.src} alt="beneficios" class="rounded-2xl">
+          <img src={beneficios.src} alt="beneficios" class="rounded-2xl" />
         </div>
       </div>
 
       <!--CONTENEDOR DE PAQUETES -->
       <div class="pt-16 md:pt-20">
-        <h1 class="text-2xl md:text-3xl font-semibold text-center tracking-wide mb-10 md:mb-15">
+        <h1
+          class="sm-paquetes-titulo text-2xl md:text-3xl font-semibold text-center tracking-wide mb-10 md:mb-15"
+        >
           PAQUETES DE <span class="text-titulos">CONTENIDO</span>
         </h1>
-        
+
         <!--CONTENEDOR DE CARDS PAQUETES -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-          
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start"
+        >
           <!--CARD PAQUETE 1 -->
-          <div class="border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full">
+          <div
+            class="sm-card border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full"
+          >
             <div class="text-center">
               <span class="text-xl font-light tracking-wide block">BRAND</span>
-              <h3 class="text-3xl font-semibold text-titulos tracking-wide">LAUNCH</h3>
+              <h3 class="text-3xl font-semibold text-titulos tracking-wide">
+                LAUNCH
+              </h3>
               <p class="text-textos font-normal text-sm mt-5">
                 Para negocios que comienzan a construir su presencia digital.
               </p>
             </div>
 
-            <div class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-xs">
+            <div
+              class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-xs"
+            >
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
                 <span> 8 publicaciones mensuales</span>
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
-                <span>Adaptación del diseño para las plataformas seleccionadas</span>
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
+                <span
+                  >Adaptación del diseño para las plataformas seleccionadas</span
+                >
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
                 <span>Programación mensual de contenido</span>
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
-                <span>Información y mensajes clave proporcionados por el cliente</span>
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
+                <span
+                  >Información y mensajes clave proporcionados por el cliente</span
+                >
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
-                <span>Texto de publicación (copy out) proporcionado por el cliente</span>
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
+                <span
+                  >Texto de publicación (copy out) proporcionado por el cliente</span
+                >
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
                 <span>Diseño unificado para todas las plataformas</span>
               </div>
             </div>
 
             <div class="flex flex-col items-center gap-5 mt-auto">
-              <div class="font-bold text-4xl tracking-wide">$000.00<span class="text-xl font-medium ml-1">MXN</span></div>
-              <p class="font-normal text-xs tracking-wide text-textos">Lapso de 3 a 4 semanas</p>
-              <button class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer">
+              <div class="font-bold text-4xl tracking-wide">
+                $000.00<span class="text-xl font-medium ml-1">MXN</span>
+              </div>
+              <p class="font-normal text-xs tracking-wide text-textos">
+                Lapso de 3 a 4 semanas
+              </p>
+              <button
+                class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer"
+              >
                 ADQUIRIR
               </button>
             </div>
           </div>
 
           <!--CARD PAQUETE 2 -->
-          <div class="border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full">
+          <div
+            class="sm-card border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full"
+          >
             <div class="text-center">
               <span class="text-xl font-light tracking-wide block">BRAND</span>
-              <h3 class="text-3xl font-semibold text-titulos tracking-wide">360</h3>
+              <h3 class="text-3xl font-semibold text-titulos tracking-wide">
+                360
+              </h3>
               <p class="text-textos font-normal text-sm mt-5">
                 Para marcas que buscan incrementar su alcance y posicionamiento.
               </p>
             </div>
 
-            <div class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-xs">
+            <div
+              class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-xs"
+            >
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
                 <span>16 publicaciones mensuales</span>
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
-                <span>Desarrollo de conceptos creativos para las publicaciones</span>
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
+                <span
+                  >Desarrollo de conceptos creativos para las publicaciones</span
+                >
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
-                <span>Redacción profesional de textos para publicaciones y campañas</span>
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
+                <span
+                  >Redacción profesional de textos para publicaciones y campañas</span
+                >
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
                 <span>1 sesión fotográfica mensual</span>
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
                 <span>1 sesión de video mensual</span>
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
-                <span>Desarrollo de contenido específico para cada red social</span>
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
+                <span
+                  >Desarrollo de contenido específico para cada red social</span
+                >
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
-                <span>Diseño diferenciado para Instagram, Facebook y LinkedIn</span>
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
+                <span
+                  >Diseño diferenciado para Instagram, Facebook y LinkedIn</span
+                >
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
                 <span>Planeación estratégica mensual</span>
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
                 <span>Reunión mensual de seguimiento</span>
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
                 <span>Reporte básico de desempeño</span>
               </div>
             </div>
 
             <div class="flex flex-col items-center gap-5 mt-auto">
-              <div class="font-bold text-4xl tracking-wide">$000.00<span class="text-xl font-medium ml-1">MXN</span></div>
-              <p class="font-normal text-xs tracking-wide text-textos">Lapso de 3 a 4 semanas</p>
-              <button class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer">
+              <div class="font-bold text-4xl tracking-wide">
+                $000.00<span class="text-xl font-medium ml-1">MXN</span>
+              </div>
+              <p class="font-normal text-xs tracking-wide text-textos">
+                Lapso de 3 a 4 semanas
+              </p>
+              <button
+                class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer"
+              >
                 ADQUIRIR
               </button>
             </div>
           </div>
 
           <!--CARD PAQUETE 3 -->
-          <div class="border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full md:col-span-2 lg:col-span-1">
+          <div
+            class="sm-card border border-principal rounded-2xl py-10 px-6 md:px-10 lg:px-13 flex flex-col justify-between min-h-full md:col-span-2 lg:col-span-1"
+          >
             <div class="text-center">
               <span class="text-xl font-light tracking-wide block">BRAND</span>
-              <h3 class="text-3xl font-semibold text-titulos tracking-wide">GROWTH</h3>
+              <h3 class="text-3xl font-semibold text-titulos tracking-wide">
+                GROWTH
+              </h3>
               <p class="text-textos font-normal text-sm mt-5">
                 Para empresas que buscan una estrategia integral de contenido.
               </p>
             </div>
 
-            <div class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-xs">
+            <div
+              class="flex flex-col gap-5 my-12 font-extralight tracking-wide text-xs"
+            >
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
                 <span>12 publicaciones mensuales</span>
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
-                <span>Uso de material proporcionado por el cliente y banco de imágenes/videos</span>
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
+                <span
+                  >Uso de material proporcionado por el cliente y banco de
+                  imágenes/videos</span
+                >
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
-                <span>Información y mensajes clave proporcionados por el cliente</span>
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
+                <span
+                  >Información y mensajes clave proporcionados por el cliente</span
+                >
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
-                <span>Redacción profesional de textos para publicaciones (copy out)</span>
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
+                <span
+                  >Redacción profesional de textos para publicaciones (copy out)</span
+                >
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
-                <span>Diseño optimizado para Instagram, Facebook y LinkedIn</span>
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
+                <span
+                  >Diseño optimizado para Instagram, Facebook y LinkedIn</span
+                >
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
                 <span>Calendario mensual de contenido</span>
               </div>
               <div class="flex items-center gap-4">
-                <img src={icon_check.src} alt="icon check" class="w-4 h-4 shrink-0 object-contain">
+                <img
+                  src={icon_check.src}
+                  alt="icon check"
+                  class="w-4 h-4 shrink-0 object-contain"
+                />
                 <span>Recomendaciones estratégicas de contenido</span>
               </div>
             </div>
 
             <div class="flex flex-col items-center gap-5 mt-auto">
-              <div class="font-bold text-4xl tracking-wide">$000.00<span class="text-xl font-medium ml-1">MXN</span></div>
-              <p class="font-normal text-xs tracking-wide text-textos">Lapso de 3 a 4 semanas</p>
-              <button class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer">
+              <div class="font-bold text-4xl tracking-wide">
+                $000.00<span class="text-xl font-medium ml-1">MXN</span>
+              </div>
+              <p class="font-normal text-xs tracking-wide text-textos">
+                Lapso de 3 a 4 semanas
+              </p>
+              <button
+                class="py-2.5 w-full max-w-[200px] bg-principal font-semibold rounded-2xl tracking-wide hover:bg-principal/80 transition-colors cursor-pointer"
+              >
                 ADQUIRIR
               </button>
             </div>
           </div>
         </div>
       </div>
-      
-
-
     </div>
   </main>
-  <Contacto/>
-
+  <Contacto />
 </MainLayout>
+<style>
+  .sm-titulo,
+  .sm-texto,
+  .sm-beneficios,
+  .sm-paquetes-titulo,
+  .sm-card {
+    opacity: 0;
+    transition: all 0.8s ease;
+  }
+
+  .sm-titulo {
+    transform: translateX(-80px);
+  }
+
+  .sm-texto {
+    transform: translateY(40px);
+  }
+
+  .sm-beneficios {
+    transform: translateX(-60px);
+  }
+
+  .sm-paquetes-titulo {
+    transform: translateY(60px);
+  }
+
+  .sm-card {
+    transform: translateY(80px);
+  }
+
+  .sm-visible {
+    opacity: 1;
+    transform: none;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const titulo = document.querySelector(".sm-titulo");
+    const texto = document.querySelector(".sm-texto");
+    const beneficios = document.querySelector(".sm-beneficios");
+    const paquetesTitulo = document.querySelector(".sm-paquetes-titulo");
+    const cards = document.querySelectorAll(".sm-card");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target === titulo) {
+              titulo.classList.add("sm-visible");
+
+              setTimeout(() => {
+                texto?.classList.add("sm-visible");
+              }, 250);
+            }
+
+            if (entry.target === beneficios) {
+              beneficios.classList.add("sm-visible");
+            }
+
+            if (entry.target === paquetesTitulo) {
+              paquetesTitulo.classList.add("sm-visible");
+
+              cards.forEach((card, index) => {
+                setTimeout(
+                  () => {
+                    card.classList.add("sm-visible");
+                  },
+                  300 + index * 200,
+                );
+              });
+            }
+          } else {
+            if (entry.target === titulo) {
+              titulo.classList.remove("sm-visible");
+              texto?.classList.remove("sm-visible");
+            }
+
+            if (entry.target === beneficios) {
+              beneficios.classList.remove("sm-visible");
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+      },
+    );
+
+    if (titulo) observer.observe(titulo);
+    if (beneficios) observer.observe(beneficios);
+    if (paquetesTitulo) observer.observe(paquetesTitulo);
+  });
+</script>

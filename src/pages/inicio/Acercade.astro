@@ -9,7 +9,7 @@ import imagen2 from "../../assets/acercade/seccion2.png";
   <div class="w-4/5 ">
     <!-- SECCIÓN 1 -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center mt-10">
-      <div class="order-2 md:order-1">
+      <div class="acerca-img-left  order-2 md:order-1">
         <!-- IMAGEN 1 -->
         <img
           src={imagen1.src}
@@ -18,7 +18,7 @@ import imagen2 from "../../assets/acercade/seccion2.png";
         />
       </div>
 
-      <div class="order-1 md:order-2">
+      <div class="acerca-text-right order-1 md:order-2">
         <h2 class="text-2xl md:text-4xl font-bold tracking-wider">
           TU HISTORIA
           <span class="text-titulos"> NUESTRA INSPIRACIÓN </span>
@@ -51,7 +51,7 @@ import imagen2 from "../../assets/acercade/seccion2.png";
 
     <!-- SECCIÓN 2 -->
     <div class="grid lg:grid-cols-2 gap-10 md:gap-20 items-center mt-32">
-      <div class="max-w-xl">
+      <div class="acerca-text-left max-w-xl">
         <!-- titulo 2 -->
         <h2 class="text-2xl md:text-4xl font-bold tracking-wider">
           QUIÉNES
@@ -76,7 +76,7 @@ import imagen2 from "../../assets/acercade/seccion2.png";
         </div>
       </div>
       <!-- IMAGEN 2 -->
-      <div>
+      <div class="acerca-img-right">
         <img
           src={imagen2.src}
           alt="Quiénes somos"
@@ -86,3 +86,60 @@ import imagen2 from "../../assets/acercade/seccion2.png";
     </div>
   </div>
 </section>
+<style>
+.acerca-img-left,
+.acerca-img-right,
+.acerca-text-left,
+.acerca-text-right {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.acerca-img-left {
+  transform: translateX(-100px);
+}
+
+.acerca-text-right {
+  transform: translateX(100px);
+}
+
+.acerca-text-left {
+  transform: translateX(-100px);
+}
+
+.acerca-img-right {
+  transform: translateX(100px);
+}
+
+.acerca-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const elementos = document.querySelectorAll(
+    ".acerca-img-left, .acerca-img-right, .acerca-text-left, .acerca-text-right"
+  );
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add("acerca-visible");
+        } else {
+          entry.target.classList.remove("acerca-visible");
+        }
+
+      });
+    },
+    {
+      threshold: 0.2,
+    }
+  );
+
+  elementos.forEach((el) => observer.observe(el));
+});
+</script>

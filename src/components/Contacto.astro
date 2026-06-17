@@ -11,32 +11,27 @@ const servicios = [
 ];
 ---
 
-<section
-  id="contacto"
-  class="py-12"
->
+<section id="contacto" class="py-12">
   <div class="w-4/5 mx-auto">
     <!-- TITULO -->
 
     <div class="text-center mb-8">
       <h2
-        class="text-white text-1xl md:text-4xl lg:text-4xl font-semibold md:font-bold uppercase tracking-wider"
+        class="contacto-h2 text-white text-1xl md:text-4xl lg:text-4xl font-semibold md:font-bold uppercase tracking-wider"
       >
         Queremos saber más de ti.
       </h2>
 
       <h3
-        class="text-titulos text-1xl md:text-4xl lg:text-4xl font-extrabold uppercase md:mt-3"
+        class="contacto-h3 text-titulos text-1xl md:text-4xl lg:text-4xl font-extrabold uppercase md:mt-3"
       >
         Contáctanos
       </h3>
     </div>
 
-    <div class="grid lg:grid-cols-[320px_1fr] gap-4 lg:gap-6">
+    <div class="contacto-form grid lg:grid-cols-[320px_1fr] gap-4 lg:gap-6">
       <!-- RECUADRO HABLEMOS-->
-      <div
-        class="border border-principal rounded-xl p-5 px-10"
-      >
+      <div class="border border-principal rounded-xl p-5 px-10">
         <h4 class="text-titulos text-1xl font-light mb-8">Hablemos</h4>
 
         <div class="space-y-3">
@@ -171,4 +166,67 @@ const servicios = [
     background: #111;
     color: white;
   }
+  .contacto-h2 {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.8s ease;
+  }
+
+  .contacto-h3 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+  }
+
+  .contacto-form {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1s ease;
+  }
+
+  .contacto-visible {
+    opacity: 1;
+    transform: none;
+  }
 </style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const h2 = document.querySelector(".contacto-h2");
+  const h3 = document.querySelector(".contacto-h3");
+  const form = document.querySelector(".contacto-form");
+
+  if (!h2 || !h3 || !form) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+
+        h2.classList.add("contacto-visible");
+
+        setTimeout(() => {
+          h3.classList.add("contacto-visible");
+        }, 200);
+
+        setTimeout(() => {
+          form.classList.add("contacto-visible");
+        }, 400);
+
+      } else {
+
+        h2.classList.remove("contacto-visible");
+        h3.classList.remove("contacto-visible");
+        form.classList.remove("contacto-visible");
+
+      }
+
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  observer.observe(h2);
+
+});
+</script>
