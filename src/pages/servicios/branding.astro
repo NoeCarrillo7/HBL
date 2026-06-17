@@ -3,14 +3,26 @@ import { Image } from "astro:assets";
 import Contacto from "../../components/Contacto.astro";
 import HeroServicios from "../../components/HeroServicios.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
-
+//imagenes 
 import icon_check from "../../assets/servicios/icon-check.png";
-
+import servicio1 from "../../assets/servicios/creditos/servicio1.png";
+import servicio2 from "../../assets/servicios/creditos/servicio2.png";
+import servicio3 from "../../assets/servicios/creditos/servicio3.png";
+import servicio4 from "../../assets/servicios/creditos/servicio4.png";
+import servicio5 from "../../assets/servicios/creditos/servicio5.png";
+import servicio6 from "../../assets/servicios/creditos/servicio6.png";
+import servicio7 from "../../assets/servicios/creditos/servicio7.png";
+import servicio8 from "../../assets/servicios/creditos/servicio8.png";
+import servicio9 from "../../assets/servicios/creditos/servicio9.png";
+import servicio10 from "../../assets/servicios/creditos/servicio10.png";
+import servicio11 from "../../assets/servicios/creditos/servicio11.png";
+import servicio12 from "../../assets/servicios/creditos/servicio12.png";
+import servicio13 from "../../assets/servicios/creditos/servicio13.png";
 const servicios = [
   {
     categoria: "Ilustración y Recursos Gráficos",
     creditos: "2 a 8 créditos",
-    imagen: icon_check.src,
+    imagen: servicio1.src,
     items: [
       "Ilustraciones personalizadas",
       "Iconografía de marca",
@@ -22,8 +34,7 @@ const servicios = [
   {
     categoria: "Menús Físicos y Digitales",
     creditos: "8 a 10 créditos",
-    imagen:
-      "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400&auto=format&fit=crop&q=60",
+     imagen: servicio2.src,
     items: [
       "Menú impreso",
       "Menú digital PDF",
@@ -36,8 +47,7 @@ const servicios = [
   {
     categoria: "Packaging y Empaques",
     creditos: "4 a 8 créditos",
-    imagen:
-      "https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=400&auto=format&fit=crop&q=60",
+     imagen: servicio3.src,
     items: [
       "Papel alimentario personalizado",
       "Cajas para alimentos",
@@ -49,15 +59,13 @@ const servicios = [
   {
     categoria: "Material Publicitario Impreso",
     creditos: "4 a 6 créditos",
-    imagen:
-      "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=400&auto=format&fit=crop&q=60",
+     imagen: servicio4.src,
     items: ["Flyers", "Folletos", "Dípticos", "Trípticos", "Posters"],
   },
   {
     categoria: "Uniformes Corporativos",
     creditos: "4 a 8 créditos",
-    imagen:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&auto=format&fit=crop&q=60",
+     imagen: servicio5.src,
     items: [
       "Delantales",
       "Camisetas",
@@ -73,8 +81,7 @@ const servicios = [
   {
     categoria: "Desechables y Material de Servicio",
     creditos: "4 a 6 créditos",
-    imagen:
-      "https://images.unsplash.com/photo-1585751119414-ef2636f8aede?w=400&auto=format&fit=crop&q=60",
+     imagen: servicio6.src,
     items: [
       "Vasos personalizados",
       "Servilletas",
@@ -87,8 +94,7 @@ const servicios = [
   {
     categoria: "Etiquetas y Stickers",
     creditos: "1 a 3 créditos",
-    imagen:
-      "https://images.unsplash.com/photo-1589987593123-649f35409f4f?w=400&auto=format&fit=crop&q=60",
+     imagen: servicio7.src,
     items: [
       "Etiquetas para productos",
       "Stickers promocionales",
@@ -101,8 +107,7 @@ const servicios = [
   {
     categoria: "Merchandising",
     creditos: "2 a 6 créditos",
-    imagen:
-      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&auto=format&fit=crop&q=60",
+    imagen: servicio8.src,
     items: [
       "Bolígrafos",
       "Libretas",
@@ -117,8 +122,7 @@ const servicios = [
   {
     categoria: "Señalética y Viniles",
     creditos: "2 a 8 créditos",
-    imagen:
-      "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=400&auto=format&fit=crop&q=60",
+     imagen: servicio9.src,
     items: [
       "Señalización interior",
       "Señalización exterior",
@@ -132,8 +136,7 @@ const servicios = [
   {
     categoria: "Papelería Corporativa",
     creditos: "2 a 6 créditos",
-    imagen:
-      "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&auto=format&fit=crop&q=60",
+     imagen: servicio10.src,
     items: [
       "Tarjetas de presentación",
       "Tarjetas de cliente frecuente",
@@ -147,8 +150,7 @@ const servicios = [
   {
     categoria: "Identidad para Redes Sociales",
     creditos: "1 a 4 créditos",
-    imagen:
-      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=400&auto=format&fit=crop&q=60",
+     imagen: servicio11.src,
     items: [
       "Foto de perfil y portada",
       "Plantillas para publicaciones",
@@ -160,8 +162,7 @@ const servicios = [
   {
     categoria: "Material Comercial y Ventas",
     creditos: "4 a 8 créditos",
-    imagen:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&auto=format&fit=crop&q=60",
+     imagen: servicio12.src,
     items: [
       "Presentación corporativa",
       "Brochure",
@@ -171,12 +172,11 @@ const servicios = [
       "Hojas de venta",
       "Propuestas comerciales",
     ],
-  },
+  },  
   {
     categoria: "Publicidad Exterior",
     creditos: "4 a 10 créditos",
-    imagen:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&auto=format&fit=crop&q=60",
+     imagen: servicio13.src,
     items: [
       "Lonas",
       "Banners",
