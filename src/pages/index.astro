@@ -1,6 +1,6 @@
 ---
-//Como la pagina de inicio se escribe sobre el MainLayout ya no es necesario importar los componentes por que esos
-//ya estan importados alla
+import { Image } from 'astro:assets';
+
 import MainLayout from "../layouts/MainLayout.astro";
 import Contacto from "../components/Contacto.astro";
 import Acercade from "../pages/inicio/Acercade.astro";
@@ -21,6 +21,7 @@ import branding_inicio from "../assets/branding-inicio.png";
       alt="Fondo hero"
       class="absolute inset-0 w-full h-full object-cover object-top md:object-center"
     />
+    
 
     <div class="w-4/5 ">
       <div class="relative z-10 pt-24 md:pt-0">
