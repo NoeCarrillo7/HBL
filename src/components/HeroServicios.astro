@@ -5,30 +5,112 @@ interface Props {
 const { servicioActivo } = Astro.props;
 ---
 
-<section class="flex flex-col items-center">
+<section id="servicios" class="flex flex-col items-center">
   <div class="w-4/5 flex flex-col items-center mt-15 ">
-    <p class="text-titulos font-light tracking-wide text-sm md:text-2xl mb-2.5">NUESTROS SERVICIOS</p>
+    <p class="anim-p  text-titulos font-light tracking-wide text-sm md:text-2xl mb-2.5">NUESTROS SERVICIOS</p>
   
-    <h2 class="text-center text-3xl md:text-5xl font-bold mb-5 tracking-wide">
+    <h2 class="anim-h2  text-center text-3xl md:text-5xl font-bold mb-5 tracking-wide">
       SOLUCIONES DISEÑADAS<br> A TU <span class="text-titulos">MEDIDA</span>
     </h2>
     
-    <span class="text-textos font-normal text-sm md:text-lg text-center tracking-wide ">
+    <span class="anim-span text-textos font-normal text-sm md:text-lg text-center tracking-wide ">
       Ofrecemos una gama de servicios para satisfacer las necesidades de <br class="hidden md:inline"> tu marca y hacerla destacar.
     </span>
 
-    <a class="px-5 py-2.5 bg-principal hover:bg-[#5f18bd] text-white text-sm rounded-full mt-10 mb-20 font-light tracking-wide transition-colors" href="#">
+    <a class="anim-btn px-5 py-2.5 bg-principal hover:bg-[#5f18bd] text-white text-sm rounded-full mt-10 mb-20 font-light tracking-wide transition-colors" href="#">
       DESCARGAR CATÁLOGO
     </a>
     
     <div class="w-full max-w-6xl grid grid-cols-2 sm:grid-cols-3 md:flex md:justify-between gap-3 md:gap-2">
-      <a href="/servicios/branding" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'branding' ? 'active' : ''}`}>BRANDING</a>
-      <a href="/servicios/web" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'web' ? 'active' : ''}`}>WEB</a>
-      <a href="/servicios/social-media" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'social-media' ? 'active' : ''}`}>SOCIAL MEDIA</a>
-      <a href="/servicios/audiovisual" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'audiovisual' ? 'active' : ''}`}>FOTOGRAFIA</a>
-      <a href="/servicios/marketing" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'marketing' ? 'active' : ''}`}>MARKETING</a>
-      <a href="/servicios/consultoria" class={`text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'consultoria' ? 'active' : ''}`}>ASESORIA</a>
+      <a href="/servicios/branding" class={`servicio-link text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'branding' ? 'active' : ''}`}>BRANDING</a>
+      <a href="/servicios/web" class={`servicio-link text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'web' ? 'active' : ''}`}>WEB</a>
+      <a href="/servicios/social-media" class={`servicio-link text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'social-media' ? 'active' : ''}`}>SOCIAL MEDIA</a>
+      <a href="/servicios/audiovisual" class={`servicio-link text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'audiovisual' ? 'active' : ''}`}>FOTOGRAFIA</a>
+      <a href="/servicios/marketing" class={`servicio-link text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'marketing' ? 'active' : ''}`}>MARKETING</a>
+      <a href="/servicios/consultoria" class={`servicio-link text-center text-xs font-light border border-white rounded py-2.5 transition-colors hover:bg-white/10 md:w-[15%] ${servicioActivo === 'consultoria' ? 'active' : ''}`}>ASESORIA</a>
     </div>
   </div>
   
 </section>
+<style>
+  /* P: aparece desde la izquierda */
+.anim-p {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: all .8s ease;
+}
+
+/* H2: zoom */
+.anim-h2 {
+  opacity: 0;
+  transform: scale(.8);
+  transition: all 1s ease;
+}
+
+/* Span: aparece desde abajo */
+.anim-span {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all .8s ease;
+}
+
+/* Botón catálogo: rebote suave */
+.anim-btn {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all .8s ease;
+}
+
+/* Menú servicios */
+.servicio-link {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all .6s ease;
+}
+
+/* Estado visible */
+.anim-p.visible,
+.anim-h2.visible,
+.anim-span.visible,
+.anim-btn.visible,
+.servicio-link.visible {
+  opacity: 1;
+  transform: none;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.getElementById("servicios");
+  if (!section) return;
+  const p = section.querySelector(".anim-p");
+  const h2 = section.querySelector(".anim-h2");
+  const span = section.querySelector(".anim-span");
+  const btn = section.querySelector(".anim-btn");
+  const links = section.querySelectorAll(".servicio-link");
+  if (!p || !h2 || !span || !btn) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+
+        setTimeout(() => p.classList.add("visible"), 100);
+        setTimeout(() => h2.classList.add("visible"), 300);
+        setTimeout(() => span.classList.add("visible"), 500);
+        setTimeout(() => btn.classList.add("visible"), 700);
+
+        links.forEach((link, index) => {
+          setTimeout(() => {
+            link.classList.add("visible");
+          }, 900 + (index * 100));
+        });
+
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  observer.observe(section);
+});
+</script>

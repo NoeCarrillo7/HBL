@@ -27,10 +27,10 @@ const servicios = [
     <div class="w-4/5 mb-10 mt-20 md:mt-30  grid grid-cols-1 md:grid-cols-2">
       <div class="flex flex-col space-y-8">
         <div class="">
-          <h1 class="text-2xl md:text-4xl font-bold mb-5 tracking-wider">
+          <h1 class="asesoria-titulo text-2xl md:text-4xl font-bold mb-5 tracking-wider">
             ASESORIA 1:1 <br><span class="text-titulos md:text-3xl">ESTRATEGIAS PERSONALIZADAS</span>
           </h1>
-          <p class="text-textos font-normal text-xs md:text-lg tracking-wide leading-relaxed">
+          <p class="asesoria-texto text-textos font-normal text-xs md:text-lg tracking-wide leading-relaxed">
             Analizamos tu negocio y diseñamos una estrategia personalizada para impulsar su crecimiento y alcanzar tus objetivos.
           </p>
         </div>
@@ -61,13 +61,13 @@ const servicios = [
           <img 
             src={Consulatoria.src}
             alt="Sesión de asesoría" 
-            class="w-full h-auto object-contain"
+            class="asesoria-img w-full h-auto object-contain"
           />
         </div>
 
         <a 
           href="#agenda" 
-          class="col-start-1 row-start-1 z-10 w-32 h-32 md:w-50 md:h-50 rounded-full border border-white bg-black/80 hover:bg-principal hover:border-white transition-all duration-300 flex items-center justify-center text-center p-4 group shadow-xl self-end justify-self-start mb-40 ml-40 md:mb-10 md:-ml-20"
+          class="asesoria-btn col-start-1 row-start-1 z-10 w-32 h-32 md:w-50 md:h-50 rounded-full border border-white bg-black/80 hover:bg-principal hover:border-white transition-all duration-300 flex items-center justify-center text-center p-4 group shadow-xl self-end justify-self-start mb-40 ml-40 md:mb-10 md:-ml-20"
         >
           <span class="text-sm md:text-base font-semibold tracking-wide text-white group-hover:scale-105 transition-transform duration-200">
             Agenda una reunión
@@ -137,4 +137,85 @@ const servicios = [
       transform: translateY(calc(-50% - 0.5rem)); /* Resta la mitad del gap para evitar saltos */
     }
   }
+  .asesoria-titulo,
+.asesoria-texto,
+.asesoria-img,
+.asesoria-btn {
+  opacity: 0;
+  transition: all .8s ease;
+}
+
+/* Título desde la izquierda */
+.asesoria-titulo {
+  transform: translateX(-80px);
+}
+
+/* Texto desde abajo */
+.asesoria-texto {
+  transform: translateY(40px);
+}
+
+/* Imagen con zoom */
+.asesoria-img {
+  transform: scale(.8);
+}
+
+/* Botón con zoom */
+.asesoria-btn {
+  transform: scale(.5);
+}
+
+.asesoria-visible {
+  opacity: 1;
+  transform: none;
+}
 </style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const titulo = document.querySelector(".asesoria-titulo");
+  const texto = document.querySelector(".asesoria-texto");
+  const imagen = document.querySelector(".asesoria-img");
+  const boton = document.querySelector(".asesoria-btn");
+
+  const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+
+        titulo?.classList.add("asesoria-visible");
+
+        setTimeout(() => {
+          texto?.classList.add("asesoria-visible");
+        }, 200);
+
+        setTimeout(() => {
+          imagen?.classList.add("asesoria-visible");
+        }, 500);
+
+        setTimeout(() => {
+          boton?.classList.add("asesoria-visible");
+        }, 800);
+
+      } else {
+
+        titulo?.classList.remove("asesoria-visible");
+        texto?.classList.remove("asesoria-visible");
+        imagen?.classList.remove("asesoria-visible");
+        boton?.classList.remove("asesoria-visible");
+
+      }
+
+    });
+
+  }, {
+    threshold: 0.3
+  });
+
+  if (titulo) {
+    observer.observe(titulo);
+  }
+
+});
+</script>

@@ -19,8 +19,8 @@ import fotografia3 from '../../assets/servicios/fotografia3.png'
   <main class="flex flex-col items-center">
     <div class="w-4/5 mt-20 md:mt-30 mb-5 md:mb-25 ">
       <div>
-        <h1 class="text-2xl md:text-4xl font-bold mb-5 tracking-wide" >CONTENIDO <span class="text-titulos">AUDIOVISUAL</span></h1>
-        <p class="text-textos font-normal text-xs md:text-lg tracking-wide leading-relaxe">
+        <h1 class="av-titulo text-2xl md:text-4xl font-bold mb-5 tracking-wide" >CONTENIDO <span class="text-titulos">AUDIOVISUAL</span></h1>
+        <p class="av-texto  text-textos font-normal text-xs md:text-lg tracking-wide leading-relaxe">
           Producimos contenido visual de alta calidad para fortalecer la presencia de tu marca, 
           comunicar tu propuesta de valor y conectar con tu audiencia a través de fotografía, video y edición profesional.
         </p>
@@ -33,20 +33,20 @@ import fotografia3 from '../../assets/servicios/fotografia3.png'
           <img 
             src={fotografia.src} 
             alt="Cámara de fondo" 
-            class="w-full max-w-xl object-contain opacity-40 md:opacity-100" 
+            class="av-imagen w-full max-w-xl object-contain opacity-40 md:opacity-100" 
           />
         </div>
 
         <!--COLUMNA IZQUIERDA-->
         <div class="relative z-10 flex flex-col space-y-16 md:space-y-64">
           <!--INFORMACION COLUMNA IZQUIERDA 2 -->
-          <div>
+          <div class="av-left-1">
             <img src={icon_fotografia1.src} alt="">
             <h3 class="text-sm md:text-lg font-normal mt-6 mb-2">Sesiones Fotográficas Profesionales</h3>
             <p class="text-textos font-light text-xs md:text-sm">Fotografía de producto, gastronómica, corporativa, inmobiliaria y para campañas publicitarias.</p>
           </div>
           <!--INFORMACION COLUMNA IZQUIERDA 2 -->
-          <div>
+          <div class="av-left-2">
             <img src={icon_fotografia2.src} alt="">
             <h3 class="text-sm md:text-lg font-normal mt-6 mb-2">Videos Corporativos y Promocionales</h3>
             <p class="text-textos font-light text-xs md:text-sm">Videos institucionales, testimoniales, de presentación de empresa, productos o servicios.</p>
@@ -56,13 +56,13 @@ import fotografia3 from '../../assets/servicios/fotografia3.png'
         <!--COLUMNA DERECHA-->
         <div class="relative z-10 space-y-16 md:space-y-64 text-right">
           <!--INFORMACION COLUMNA DERECHA 1 -->
-          <div>
+          <div class="av-right-1">
             <img src={icon_fotografia3.src} alt="" class="block ml-auto">
             <h3 class="text-sm md:text-lg font-normal mt-6 mb-2">Contenido para Redes Sociales</h3>
             <p class="text-textos font-light text-xs md:text-sm">Producción de reels, videos verticales, contenido para TikTok, Instagram, Facebook y otras plataformas digitales.</p>
           </div>
           <!--INFORMACION COLUMNA DERECHA 2 -->
-          <div>
+          <div class="av-right-2">
             <img src={icon_fotografia4.src} alt="" class="block ml-auto">
             <h3 class="text-sm md:text-lg font-normal mt-6 mb-2">Edición y Postproducción de Material Existente</h3>
             <p class="text-textos font-light text-xs md:text-sm">Edición profesional de fotografías y videos proporcionados por el cliente, incluyendo corrección de color, audio, subtítulos y optimización para diferentes formatos.</p>
@@ -73,7 +73,7 @@ import fotografia3 from '../../assets/servicios/fotografia3.png'
 
       <!--SECCION DE CARDS -->
       <div class="mt-15 md:mt-30">
-        <h1 class="text-center font-semibold text-base md:text-3xl tracking-wide">Todos lo proyectos incluyen</h1>
+        <h1 class="av-cards-title text-center font-semibold text-base md:text-3xl tracking-wide">Todos lo proyectos incluyen</h1>
         
         <!--CONTENEDOR DE CARDS -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
@@ -144,3 +144,136 @@ import fotografia3 from '../../assets/servicios/fotografia3.png'
   </main>
   <Contacto/>
 </MainLayout>
+<style>
+  .av-titulo,
+.av-texto,
+.av-imagen,
+.av-left-1,
+.av-left-2,
+.av-right-1,
+.av-right-2,
+.av-cards-title {
+  opacity: 0;
+  transition: all .8s ease;
+}
+
+.av-titulo {
+  transform: translateX(-80px);
+}
+
+.av-texto {
+  transform: translateY(40px);
+}
+
+.av-imagen {
+  transform: scale(.7);
+}
+
+.av-left-1,
+.av-left-2 {
+  transform: translateX(-80px);
+}
+
+.av-right-1,
+.av-right-2 {
+  transform: translateX(80px);
+}
+
+.av-cards-title {
+  transform: translateY(60px);
+}
+
+.av-visible {
+  opacity: 1;
+  transform: none;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const titulo = document.querySelector(".av-titulo");
+  const texto = document.querySelector(".av-texto");
+  const imagen = document.querySelector(".av-imagen");
+  const left1 = document.querySelector(".av-left-1");
+  const left2 = document.querySelector(".av-left-2");
+  const right1 = document.querySelector(".av-right-1");
+  const right2 = document.querySelector(".av-right-2");
+  const cardsTitle = document.querySelector(".av-cards-title");
+
+  const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+      if (entry.target === titulo) {
+
+        if (entry.isIntersecting) {
+
+          titulo.classList.add("av-visible");
+
+          setTimeout(() => {
+            texto?.classList.add("av-visible");
+          }, 200);
+
+        } else {
+
+          titulo.classList.remove("av-visible");
+          texto?.classList.remove("av-visible");
+
+        }
+      }
+
+      if (entry.target === imagen) {
+
+        if (entry.isIntersecting) {
+
+          imagen.classList.add("av-visible");
+
+          setTimeout(() => {
+            left1?.classList.add("av-visible");
+          }, 200);
+
+          setTimeout(() => {
+            left2?.classList.add("av-visible");
+          }, 500);
+
+          setTimeout(() => {
+            right1?.classList.add("av-visible");
+          }, 800);
+
+          setTimeout(() => {
+            right2?.classList.add("av-visible");
+          }, 1100);
+
+        } else {
+
+          imagen.classList.remove("av-visible");
+          left1?.classList.remove("av-visible");
+          left2?.classList.remove("av-visible");
+          right1?.classList.remove("av-visible");
+          right2?.classList.remove("av-visible");
+
+        }
+      }
+
+      if (entry.target === cardsTitle) {
+
+        if (entry.isIntersecting) {
+          cardsTitle.classList.add("av-visible");
+        } else {
+          cardsTitle.classList.remove("av-visible");
+        }
+
+      }
+
+    });
+
+  }, {
+    threshold: 0.3
+  });
+
+  if (titulo) observer.observe(titulo);
+  if (imagen) observer.observe(imagen);
+  if (cardsTitle) observer.observe(cardsTitle);
+
+});
+</script>

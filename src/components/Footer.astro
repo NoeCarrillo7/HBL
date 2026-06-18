@@ -4,12 +4,13 @@ import fond from '../assets/footer/fondo.png';
 ---
 
 <footer
+  id="footer"
   class="relative overflow-hidden px-8 py-8 bg-cover bg-center bg-no-repeat"
   style={`background-image: url(${fond.src});`}
 >
   <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center md:text-left">
 
-    <div class="flex justify-center md:justify-start">
+    <div class="footer-logo flex justify-center md:justify-start">
       <img
         src={logo.src}
         alt="HBL"
@@ -17,7 +18,7 @@ import fond from '../assets/footer/fondo.png';
       />
     </div>
 
-    <div>
+    <div class="footer-item">
       <h4 class="text-white text-xl font-medium mb-4">
         LINKS
       </h4>
@@ -37,7 +38,7 @@ import fond from '../assets/footer/fondo.png';
       </div>
     </div>
 
-    <div>
+    <div class="footer-item">
       <h4 class="text-white text-xl font-medium mb-4">
         SOCIAL
       </h4>
@@ -59,7 +60,7 @@ import fond from '../assets/footer/fondo.png';
       </div>
     </div>
 
-    <div>
+    <div class="footer-item">
       <h4 class="text-white text-xl font-medium mb-4">
         CONTACTO
       </h4>
@@ -71,7 +72,7 @@ import fond from '../assets/footer/fondo.png';
 
   </div>
 
-  <div class="mt-12 md:mt-16 text-center text-zinc-400 text-xs px-4">
+  <div class="footer-bottom mt-12 md:mt-16 text-center text-zinc-400 text-xs px-4">
 
     <p>
       2026 Horeca Branding Lab. Todos los derechos reservados.
@@ -89,3 +90,79 @@ import fond from '../assets/footer/fondo.png';
 
   </div>
 </footer>
+<style>
+.footer-logo,
+.footer-item,
+.footer-bottom {
+  opacity: 0;
+  transition: all .8s ease;
+}
+
+.footer-logo {
+  transform: translateX(-80px);
+}
+
+.footer-item {
+  transform: translateY(40px);
+}
+
+.footer-bottom {
+  transform: translateY(30px);
+}
+
+.footer-visible {
+  opacity: 1;
+  transform: none;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const footer = document.getElementById("footer");
+
+  if (!footer) return;
+
+  const logo = footer.querySelector(".footer-logo");
+  const items = footer.querySelectorAll(".footer-item");
+  const bottom = footer.querySelector(".footer-bottom");
+
+  const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+
+        logo?.classList.add("footer-visible");
+
+        items.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add("footer-visible");
+          }, 200 + (index * 200));
+        });
+
+        setTimeout(() => {
+          bottom?.classList.add("footer-visible");
+        }, 900);
+
+      } else {
+
+        logo?.classList.remove("footer-visible");
+
+        items.forEach((item) => {
+          item.classList.remove("footer-visible");
+        });
+
+        bottom?.classList.remove("footer-visible");
+      }
+
+    });
+
+  }, {
+    threshold: 0.2
+  });
+
+  observer.observe(footer);
+
+});
+</script>
